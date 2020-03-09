@@ -1,69 +1,52 @@
-header img
-{
-	margin-top: 10px;
-	height: 100px;
-	width: 125px;
-	margin-left: 50px;
-	float: left;
-}
-header
-{
-	background-color: white;
+html {
+    background-color:#999999 !important;
 }
 
-#grad1{
-	background-image: linear-gradient(to bottom, black , white);
+body {
+    background-color: white;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 100px;
+    border-radius: 5px;
 }
-body
-{
-	margin:0;
-	padding: 0;
-	background-image: url("../imagini/123.jpg");
-	height: auto;
-	width: auto;
-	background-repeat: no-repeat;
-	background-size: cover;
-	
-}
-section {
-	
-}
-a{
-	color: white;
-	text-decoration: none;
-	text-align: center;
-}
-nav{
-	float: left;
-}
-nav ul{
-	position: fixed;
-	margin-left: 20%;
-	margin-top: 50px;
-	text-align: center;
-}
-nav ul li{
-	display: inline-block;
-	margin-left: 50px;
-	font-size: 30px;
-	text-align: center;
 
+hr{
+    clear:both;
 }
-#harta img{
-	float: left;
-	margin-top: 7%;
-	margin-left: 25%;
-}
-#continut{
-	padding: 20px;
-	max-width: 80%;
-	margin: auto;
-	background-color: #47817F;
-	margin-top: 35%;
-	text-align: justify;
-	border-radius: 25px;
 
+header{
+    background-color: turquoise;
+    color:black;
+    text-align: center;
 }
-#continut h1{
-	text-align: center;
+
+.box {
+    float: left;
+    width: 130px;
+    height: 130px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 15px;
+    
 }
+
+.box2{
+    float: right;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 15px;
+    
+}
+
+
+
+#footer{
+    clear:both;
+    padding: 10px;
+    margin: 10px;
+    background-color: #999999;
+    color:white;
+    text-align:center;
+}
+
