@@ -1,0 +1,75 @@
+header img
+{
+	margin-top: 10px;
+	height: 100px;
+	width: 125px;
+	margin-left: 50px;
+	float: left;
+}
+
+#grad1{
+	background-image: linear-gradient(to bottom, black , white);
+}
+body
+{
+	display: block;
+	margin:0;
+	padding: 0;
+	background-image: linear-gradient(to bottom, #006e6c, #54909d, #95b1c3, #cfd6e2, #ffffff);
+	height: auto;
+	width: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+section {
+	
+}
+#navbar{
+	position: fixed;
+}
+a{
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+nav{
+	float: left;
+}
+nav ul{
+	position: fixed;
+	margin-left: 20%;
+	margin-top: 50px;
+	text-align: center;
+}
+nav ul li{
+	display: inline-block;
+	margin-left: 50px;
+	font-size: 30px;
+	text-align: center;
+
+}
+.harta{
+	display: block;
+	width: 80%;
+	position: center;
+}
+#harta1{
+	display: block;
+	margin-top: 7%;
+	margin-left: 17%;
+}
+#continut{
+	padding: 20px;
+	max-width: 80%;
+	margin: auto;
+	background-color: #006E6C;
+	margin-top: 40%;
+	text-align: justify;
+	border-radius: 25px;
+	font-size: 20px;
+}
+#continut h1{
+	text-align: center;
+
+}
