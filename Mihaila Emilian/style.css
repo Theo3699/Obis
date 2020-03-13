@@ -27,11 +27,22 @@ nav ul li{
 	border-radius: 5px;
 
 }
+nav ul li:hover{
+	display: inline-block;
+	margin-left: 50px;
+	margin-right: 50px;
+	color: black;
+	text-decoration: underline;
+	font-size: 30px;
+	text-align: center;
+	border-radius: 5px;
+
+}
+
 .header
 {
 	padding: 10px;
-   border-radius: 10px;
-  /* HOVER OFF */
+   	border-radius: 10px;
    -webkit-transition: padding 1s;
 }
 
@@ -61,6 +72,20 @@ margin-bottom: 5px;
   border-radius: 5px;
 }
 
+.gotopbtn{
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  bottom: 25px;
+  right: 100px;
+  text-decoration: none;
+  background-color: #97b2c5;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  border-radius: 25px;
+  font-size: 22px;
+}
 body
 {
 	font-family:"Arial Black", Gadget, sans-serif;
@@ -106,7 +131,7 @@ a{
 	border-radius: 25px;
 	font-size: 20px;
 	clear: both;
-	
+
 }
 #continut h1{
 	text-align: center;
@@ -134,7 +159,7 @@ th, td{
 .row{
 	margin-left: 9%;
 	margin-right: auto;
-	margin-top: 50px;
+	margin-top: 30px;
 	border-radius: 25px;
 	font-family: Verdana, Geneva, sans-serif;
 
@@ -151,7 +176,7 @@ th, td{
 .column2{
 	float: left;
  border-radius: 25px;
- margin-left: 4.5%;
+ margin-left: 4%;
  margin-bottom: 25px;
   width: 40%;
   padding: 40px;
