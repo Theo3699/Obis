@@ -1,10 +1,31 @@
 header{
-	height: 150px;
-	position: fixed;
+	height: 100px;
+background-image: radial-gradient(circle, #228180, #629eac, #9fbbce, #d4dbe8, #ffffff);
 }
 header ul{
-background-color: black;
-	position: fixed;
+}
+nav{
+	float: left;
+}
+nav ul{
+	display: flex;
+	padding: 10px; 
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	margin-left: 50%;
+	margin-right: 25%;
+	margin-top: 20px;
+	text-align: center;
+}
+nav ul li{
+	display: inline-block;
+	margin-left: 50px;
+	margin-right: 50px;
+
+	font-size: 30px;
+	text-align: center;
+	border-radius: 5px;
+
 }
 .header
 {
@@ -13,18 +34,12 @@ background-color: black;
   /* HOVER OFF */
    -webkit-transition: padding 1s;
 }
-.header:hover
-{
-   padding: 20px;
-   border-radius: 15px;
-  /* HOVER ON */
-   -webkit-transition: border-radius 1s;
-}
+
 #cookie
 {
 	margin-top: 20px;
-	height: 100px;
-	width: 125px;
+	height: 70px;
+	width: 70px;
 	margin-left: 50px;
 	float: left;
 	-ms-transition: 0.4s ease-in-out;
@@ -36,11 +51,16 @@ background-color: black;
     -webkit-transform: rotate(15deg); 
     transform: rotate(15deg);
 }
-
-#grad1{
-	background-image: linear-gradient(to bottom, #b035d3, #ba75e8, #c9a6f6, #e0d3fe, #ffffff);
-
+#contur{
+		background-image: linear-gradient(to top, #006e6c, #54909d, #95b1c3, #cfd6e2, #ffffff);
+  position : relative;
+  border: 2px solid black;
+  margin: 3%;
+  margin-top : 5px;
+margin-bottom: 5px;
+  border-radius: 5px;
 }
+
 body
 {
 	font-family:"Arial Black", Gadget, sans-serif;
@@ -64,28 +84,7 @@ a{
 	text-align: center;
 
 }
-nav{
-	float: left;
-}
-nav ul{
-	background-color:#2DACAA;
-	padding: 10px; 
-	border-bottom-right-radius: 20px;
-	border-top-left-radius: 20px;
-	position: fixed;
-	margin-left: 25%;
-	margin-right: 25%;
-	margin-top: 50px;
-	text-align: center;
-}
-nav ul li{
-	display: inline-block;
-	margin-left: 25px;
-	margin-right: 25px;
-	font-size: 30px;
-	text-align: center;
 
-}
 .harta{
 	display: block;
 	width: 80%;
@@ -107,6 +106,7 @@ nav ul li{
 	border-radius: 25px;
 	font-size: 20px;
 	clear: both;
+	
 }
 #continut h1{
 	text-align: center;
