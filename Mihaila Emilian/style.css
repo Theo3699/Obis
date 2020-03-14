@@ -118,7 +118,7 @@ a{
 }
 #harta1{
 	display: block;
-	margin-top: 8%;
+	margin-top: 5%;
 	margin-left: 17%;
 }
 #continut{
@@ -126,7 +126,7 @@ a{
 	max-width: 80%;
 	margin: auto;
 	background-color:#2DACAA;
-	margin-top: 40%;
+	margin-top: 5%;
 	text-align: justify;
 	border-radius: 25px;
 	font-size: 20px;
@@ -159,7 +159,7 @@ th, td{
 .row{
 	margin-left: 9%;
 	margin-right: auto;
-	margin-top: 30px;
+	margin-top: 45%;
 	border-radius: 25px;
 	font-family: Verdana, Geneva, sans-serif;
 
@@ -194,7 +194,7 @@ th, td{
 	font-size: 20px;
 }
 .dupa_grafic{
-	margin-top: 23%;
+	margin-top: 68%;
 	margin-left: 8.9%;
 	margin-right: 20%;
 	 background-color:#2DACAA;
