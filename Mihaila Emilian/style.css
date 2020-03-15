@@ -72,7 +72,7 @@ margin-bottom: 5px;
   bottom: 25px;
   right: 100px;
   text-decoration: none;
-  background-color: #97b2c5;
+  background-color: #cdd5e1;
   text-align: center;
   line-height: 50px;
   color: white;
@@ -264,8 +264,22 @@ input[name="r"]{
 #r2:checked ~ .s1{
   margin-left: -20%;
 }
+#titlu_gif{
+  margin-top: 5%;
+  margin-left: 19%;
+  font-size: 35px;
+  color: white;
+}
+#gif{
+  display: flex;
+  margin-top: 5%;
+  margin-left: 8%;
+  height: 400px;
 
-
+}
+#gif img{
+  margin-left: 185px;
+}
 
 
 
