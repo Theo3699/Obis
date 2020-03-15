@@ -38,12 +38,6 @@ nav ul li:hover{
 
 }
 
-.header
-{
-	padding: 10px;
-   	border-radius: 10px;
-   -webkit-transition: padding 1s;
-}
 
 #cookie
 {
@@ -282,112 +276,113 @@ input[name="r"]{
 
 
 
-
-
 /* Footer*/
 .grid-container{
-	display : grid;
-  	grid-template-columns : auto auto auto auto auto;
-  	text-align : center;
-  	font-size : 25px;
-  	margin-bottom : 7%;
-  	margin-top: 5%
+  display : grid;
+    grid-template-columns : auto auto auto auto auto;
+    text-align : center;
+    font-size : 25px;
+    margin-bottom : 7%;
+    margin-top: 5%;
 }
 
 .dropdown {
-  	position: relative;
-  	display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropbtn {
-  	color: black;
-  	cursor: pointer;
-  	font-size : 25px;
-  	padding : 10px;
-  	border-radius : 24px;
-  	margin: 4px 2px;
-  	border : 2px solid black;
-  	background-color : #006e6c;
+    color: black;
+    cursor: pointer;
+    font-size : 25px;
+    padding : 10px;
+    border-radius : 24px;
+    margin: 4px 2px;
+    border : 2px solid black;
+    background-color : #006e6c;
 }
 
 .dropdown-content {
-  	display: none;
-  	position: absolute;
-  	color: black;
-  	cursor: pointer;
-  	font-size : 25px;
-  	padding : 10px;
-  	border-radius : 24px;
-  	border : 2px solid black;
-  	background-color : #006e6c;
+    display: none;
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    font-size : 25px;
+    padding : 10px;
+    border-radius : 24px;
+    border : 2px solid black;
+    background-color : #006e6c;
 }
 
 .dropdown:hover .dropdown-content{
-  	display:block;
+    display:block;
 }
 
 .dropdown-content:hover a.theo{
-  	display:block;
+    display:block;
 }
 
 .dropdown:hover a.theo{
-  	display:block;
+    display:block;
 }
 
 .dropbtn:hover {
-  	background-color : black;
-  	border : 2px solid white;  
+    background-color : black;
+    border : 2px solid white;  
 }
 
 .dropdown:hover .dropbtn{
-  	color : white;
+    color : white;
 }
+
 .lay{
-  	position: relative;
+    position: relative;
 }
 
 .obj {
-  	color: black;
-  	cursor: pointer;
-  	font-size : 25px;
-  	padding : 10px;
-  	border-radius : 24px;
-  	margin: 4px 2px;
-  	border : 2px solid black;
-  	background-color : #006e6c;
+  margin : auto;
+    color: black;
+    cursor: pointer;
+    font-size : 25px;
+    padding : 10px;
+    border-radius : 24px;
+    margin: 4px 10%;
+    border : 2px solid black;
+    background-color : #006e6c;
 }
 
 .obj:hover a.theo{
-  	color : white;
+    color : white;
 }
 
 .obj:hover {
-  	background-color : black;
-  	border : 2px solid white;
+    background-color : black;
+    border : 2px solid white;
+    color : white;
 }
 
 .dropdown-content:hover{
-	display : block;
-	color : white;
-	background-color : black;
+  display : block;
+  color : white;
+  background-color : black;
+  border : 2px solid white;
 }
 
 .dropdown-content:hover a.theo{
-	display : block;
-	color : white;
-	background-color : black;
+  display : block;
+  color : white;
+  background-color : black;
 }
 
 a.theo:hover{
-	display : block;
-	color : white;
-	background-color : black;
-	border : 0.5px solid white;
-	border-radius : 24px;
+  color : white;
+  background-color : black;
+  border : 0.5px solid white;
+  border-radius : 24px;
 }
 
 #locator { 
-	position: absolute;
- 	visibility: visible; 
- 	left: 27%; 
+  position: absolute;
+  visibility: visible; 
+  left: 27%; 
 }

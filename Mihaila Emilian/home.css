@@ -41,11 +41,11 @@ nav ul a{
 	color: #ffff;
 	text-decoration: none;
 }
-section{
+#section{
 margin-top: 1%;
-margin-left: 110px;
+margin-left: 100px;
 }
-section img{
+#section img{
 	width: 200px;
 	height: 200px;
 	border-radius: 100px;
@@ -55,14 +55,14 @@ section img{
 #profile{
 	display: flex;
 	font-family: 'Damion', cursive;
-	margin-left: 125px;
+	margin-left: 150px;
 	margin-top: 1px;
 	font-size: 50px;
 }
 #profile a{
 	text-decoration: none;
 	color: white;
-	margin-left: 150px;
+	margin-left: 175px;
 }
 #profile a:hover{
 	text-decoration: underline;
