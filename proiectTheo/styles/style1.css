@@ -2,37 +2,73 @@ html {
   background-image: linear-gradient(to bottom, #006e6c, #54909d, #95b1c3, #cfd6e2, #ffffff);
 }
 
-a{
-	color: black;
+a.theo{
 	text-decoration: none;
 	text-align: center;
+	color : black;
+}
+
+header{
+	height: 100px;
+	background-image: radial-gradient(circle, #228180, #629eac, #9fbbce, #d4dbe8, #ffffff);
 }
 
 body{
-  background-image: linear-gradient(to top, #006e6c, #54909d, #95b1c3, #cfd6e2, #ffffff);
-  position : relative;
-  border: 2px solid black;
-  margin: 3%;
-  margin-top : 0;
-  margin-bottom: 0;
-  border-radius: 5px;
+  	background-image: linear-gradient(to top, #006e6c, #54909d, #95b1c3, #cfd6e2, #ffffff);
+  	border: 2px solid black;
+  	margin: 3%;
+  	margin-top : 0;
+  	margin-bottom: 0;
+  	border-radius: 5px;
 }
 
-.top_navigation{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 20px;
+nav{
+	float: left;
+}
+nav ul{
+	display: flex;
+	padding: 10px; 
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	margin-left: 50%;
+	margin-right: 25%;
+	margin-top: 20px;
+	text-align: center;
+}
+nav ul li{
+	display: inline-block;
+	margin-left: 50px;
+	margin-right: 50px;
+
+	font-size: 30px;
+	text-align: center;
+	border-radius: 5px;
+
+}
+nav ul li:hover{
+	display: inline-block;
+	margin-left: 50px;
+	margin-right: 50px;
+	color: black;
+	text-decoration: underline;
+	font-size: 30px;
+	text-align: center;
+	border-radius: 5px;
+
 }
 
-.button:hover{
-  background-color : white;
-  color : #00000f;
+a.emi{
+	color: white;
+	text-decoration: none;
+	text-align: center;
+
 }
 
 .continut{
-  border-style: solid;
+  	border-style: solid;
 	max-width: 80%;
 	margin: auto;
+	margin-top : 3%;
 	background-color: #2DACAA;
 	text-align: justify;
 	border-radius: 25px;
@@ -40,10 +76,7 @@ body{
 }
 
 .nl{
-	float : left;
 	text-shadow: 2px 2px #ff0000;
-	width : 8%;
-	font-size : large;
 }
 
 p{
@@ -54,132 +87,165 @@ p{
 
 .supporting{
 	background-color: rgba(255, 255, 255, 0.9);
-  border-top: 5px solid #dd3b2a;
-  border-bottom: 5px solid #2babe1;
-  float: left;
-  position: relative;
-  width: 100%;
-  z-index: 3;
+  	border-top: 5px solid #dd3b2a;
+  	border-bottom: 5px solid #2babe1;
+  	width: 100%;
 }
 
 .col-container{
 	display: flex;
-  max-width: 80%;
+  	max-width: 80%;
 	margin: auto;
-  background-color: #2DACAA;
+  	background-color: #2DACAA;
 	margin-top: 3%;
 	text-align: justify;
+	border-style : solid;
 	border-radius: 25px;
-	padding : 20px;}
+	padding : 20px;
+}
 
 .col{
-	flex:1;
+	flex:1;/* wtf*/
 	padding : 16px;
 }
 
 h1{
+	text-shadow : 2px 2px #ff0000;
 	text-align : center;
 	font-size : 40px;
 }
 
 table {
-  margin-top : 7%;
-  margin-left : 30%;
-  border-collapse: collapse;
-  width: 60%;
+	border : 1px solid #ddd;
+  	margin-top : 7%;
+  	margin-left : 30%;
+  	border-collapse: collapse;
+  	width: 60%;
 }
 
 th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+  	padding: 8px;
+  	text-align: left;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){
+	background-color: #f2f2f2
+}
+
 th {
-  background-color: #4CAF50;
-  color: white;
+  	background-color: #4CAF50;
+  	color: white;
 }
 
-tr:hover {background-color:#f5f5f5;}
+tr:hover {
+	background-color:#f5f5f5;
+}
 
 .grid-container{
-  display : grid;
-  grid-template-columns : auto auto auto auto auto;
-  text-align : center;
-  font-size : 25px;
-  margin-bottom : 50%;
+	display : grid;
+  	grid-template-columns : auto auto auto auto auto;
+  	text-align : center;
+  	font-size : 25px;
+  	margin-bottom : 7%;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  	position: relative;
+  	display: inline-block;
 }
 
 .dropbtn {
-  color: black;
-  cursor: pointer;
-  font-size : 25px;
-  padding : 10px;
-  border-radius : 24px;
-  margin: 4px 2px;
-  border : 2px solid black;
-  background-color : #006e6c;
+  	color: black;
+  	cursor: pointer;
+  	font-size : 25px;
+  	padding : 10px;
+  	border-radius : 24px;
+  	margin: 4px 2px;
+  	border : 2px solid black;
+  	background-color : #006e6c;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  color: black;
-  cursor: pointer;
-  font-size : 25px;
-  padding : 10px;
-  border-radius : 24px;
-  border : 2px solid black;
-  background-color : #006e6c;
+  	display: none;
+  	position: absolute;
+  	color: black;
+  	cursor: pointer;
+  	font-size : 25px;
+  	padding : 10px;
+  	border-radius : 24px;
+  	border : 2px solid black;
+  	background-color : #006e6c;
 }
 
 .dropdown:hover .dropdown-content{
-  display:block;
+  	display:block;
 }
 
-.dropdown-content:hover a{
-  display:block;
+.dropdown-content:hover a.theo{
+  	display:block;
 }
 
-.dropdown:hover a{
-  display:block;
+.dropdown:hover a.theo{
+  	display:block;
 }
 
 .dropbtn:hover {
-  background-color : black;
-  border : 2px solid white;  
+  	background-color : black;
+  	border : 2px solid white;  
 }
 
 .dropdown:hover .dropbtn{
-  color : white;
+  	color : white;
 }
 
 .lay{
-  position: relative;
+  	position: relative;
 }
 
 .obj {
-  color: black;
-  cursor: pointer;
-  font-size : 25px;
-  padding : 10px;
-  border-radius : 24px;
-  margin: 4px 2px;
-  border : 2px solid black;
-  background-color : #006e6c;
+	margin : auto;
+  	color: black;
+  	cursor: pointer;
+  	font-size : 25px;
+  	padding : 10px;
+  	border-radius : 24px;
+  	margin: 4px 10%;
+  	border : 2px solid black;
+  	background-color : #006e6c;
 }
 
-.obj:hover a{
-  color : white;
+.obj:hover a.theo{
+  	color : white;
 }
 
 .obj:hover {
-  background-color : black;
-  border : 2px solid white;
+  	background-color : black;
+  	border : 2px solid white;
+  	color : white;
+}
+
+.dropdown-content:hover{
+	display : block;
+	color : white;
+	background-color : black;
+	border : 2px solid white;
+}
+
+.dropdown-content:hover a.theo{
+	display : block;
+	color : white;
+	background-color : black;
+}
+
+a.theo:hover{
+	color : white;
+	background-color : black;
+	border : 0.5px solid white;
+	border-radius : 24px;
+}
+
+#locator { 
+	position: absolute;
+ 	visibility: visible; 
+ 	left: 27%; 
 }
