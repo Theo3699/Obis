@@ -1,0 +1,315 @@
+html {
+    background-image: linear-gradient(to bottom, #006e6c, #54909d, #95b1c3, #cfd6e2, #ffffff);
+    background-repeat: no-repeat;
+}
+
+header {
+    height: 100px;
+    background-image: radial-gradient(circle, #228180, #629eac, #9fbbce, #d4dbe8, #ffffff);
+}
+
+header ul {}
+
+nav {
+    float: left;
+}
+
+nav ul {
+    display: flex;
+    padding: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-left: 50%;
+    margin-right: 25%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav ul li:hover {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-decoration: underline;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#cookie {
+    margin-top: 20px;
+    height: 70px;
+    width: 70px;
+    margin-left: 50px;
+    float: left;
+    -ms-transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+#cookie:hover {
+    -ms-transform: rotate(15deg);
+    /* IE 9 */
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+#contur {
+    background-image: linear-gradient(to top, #006e6c, #54909d, #95b1c3, #cfd6e2, #ffffff);
+    position: relative;
+    border: 2px solid black;
+    margin: 3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.gotopbtn {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    bottom: 25px;
+    right: 100px;
+    text-decoration: none;
+    background-color: #cdd5e1;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    border-radius: 25px;
+    font-size: 22px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 7%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 24px;
+    margin: 4px 2px;
+    border: 2px solid black;
+    background-color: #006e6c;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 24px;
+    border: 2px solid black;
+    background-color: #006e6c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover a.theo {
+    display: block;
+}
+
+.dropdown:hover a.theo {
+    display: block;
+}
+
+.dropbtn:hover {
+    background-color: black;
+    border: 2px solid white;
+}
+
+.dropdown:hover .dropbtn {
+    color: white;
+}
+
+.lay {
+    position: relative;
+}
+
+.obj {
+    margin: auto;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 24px;
+    margin: 4px 10%;
+    border: 2px solid black;
+    background-color: #006e6c;
+}
+
+.obj:hover a.theo {
+    color: white;
+}
+
+.obj:hover {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
+
+.dropdown-content:hover {
+    display: block;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+
+.dropdown-content:hover a.theo {
+    display: block;
+    color: white;
+    background-color: black;
+}
+
+a.theo:hover {
+    color: white;
+    background-color: black;
+    border: 0.5px solid white;
+    border-radius: 24px;
+}
+
+#locator {
+    position: absolute;
+    visibility: visible;
+    left: 27%;
+}
+
+#copyright {
+    text-align: center;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+#myDIV {
+    min-width: 10%;
+    height: auto;
+    text-align: center;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+hr {
+    clear: both;
+}
+
+main {
+    background-color: white;
+    padding: 0;
+    margin: 170px;
+    border-radius: 5px;
+    display: block;
+    border: 1px solid black;
+}
+
+.sect1 {
+    background-image: url('shocking-facts-about-obesity.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 35em;
+    min-width: 100%;
+    margin: auto;
+}
+
+#titlu-imagine {
+    float: left;
+    width: 200px;
+    text-align: center;
+    margin: 15px;
+}
+
+.sect24 {
+    text-align: center;
+    padding: 10px;
+}
+
+#showhide {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+/*imagine formatare */
+
+h1 {
+    text-align: center;
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 48px;
+    margin: 0 0 18px;
+    text-shadow: 1px 0 0 black;
+}
+
+.sect3 {
+    background-color: turquoise;
+    min-height: auto;
+    min-width: 100%;
+    margin: auto;
+}
+
+
+/* The navigation menu links */
+
+.sidenav {
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    background: white;
+    overflow-x: hidden;
+    padding: 8px 0;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.sidenav h2 {
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: turquoise;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
