@@ -246,9 +246,14 @@ main {
     margin: 15px;
 }
 
-.sect24 {
+.btnshowhide {
+    position: absolute;
+    right: 0;
+    top: 0;
     text-align: center;
     padding: 10px;
+    font-size: 1vw;
+    max-width: 15%;
 }
 
 #showhide {
@@ -256,6 +261,7 @@ main {
     padding: 10px;
     border: 5px solid black;
     background-color: white;
+    font-size: 2vw;
 }
 
 
