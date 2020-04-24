@@ -1,12 +1,3 @@
-function ShowHide() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-
 //Get the button:
 mybutton = document.getElementById("myBtn");
 
