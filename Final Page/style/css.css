@@ -231,6 +231,7 @@ a.theo:hover {
 .sidenav a {
     padding: 3px;
     font-size: 22px;
+    font-family: Georgia, serif;
     color: black;
     display: block;
 }
@@ -291,7 +292,7 @@ main {
     margin: 200px;
     border-radius: 5px;
     display: block;
-    min-width: 600px;
+    min-width: 700px;
     min-height: auto;
     border: 1px solid black;
     box-shadow: 10px 10px 5px black;
@@ -304,4 +305,34 @@ main {
     background-size: cover;
     min-width: auto;
     min-height: 500px;
+    margin: 10px;
+}
+
+#titlu-first-main {
+    background-color: black;
+    min-height: 70px;
+    min-width: auto;
+    color: white;
+}
+
+h1 {
+    font-size: 3vw;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+#text-introducere {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 16px;
+    padding: 30px;
+}
+
+#box1 {
+    float: left;
+    background-image: url('photo1.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 10px;
 }
