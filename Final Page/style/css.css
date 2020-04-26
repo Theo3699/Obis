@@ -308,22 +308,30 @@ main {
     margin: 10px;
 }
 
-#titlu-first-main {
+.titlu-main {
     background-color: black;
-    min-height: 70px;
+    min-height: auto;
     min-width: auto;
     color: white;
 }
 
 h1 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-align: center;
     font-family: Georgia, serif;
 }
 
 #text-introducere {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
+    min-height: 200px;
+    padding: 30px;
+}
+
+#textcopii {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 15px;
+    min-height: 200px;
     padding: 30px;
 }
 
@@ -332,7 +340,6 @@ h1 {
     background-image: url('photo1.png');
     background-position: center center;
     background-repeat: no-repeat;
-    min-width: 200px;
     min-height: 200px;
     margin: 10px;
 }
