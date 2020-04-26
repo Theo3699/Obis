@@ -340,6 +340,7 @@ h1 {
     background-image: url('photo1.png');
     background-position: center center;
     background-repeat: no-repeat;
-    min-height: 200px;
+    min-height: 300px;
+    min-width: 300px;
     margin: 10px;
 }
