@@ -6,6 +6,8 @@ body {
   overflow-y: auto;
   background-color: #12121a;
   background-image: url("background.png");
+  background-blend-mode : overlay; 
+  background-size : 15%;
 }
 
 .tot {
@@ -14,6 +16,8 @@ body {
   justify-content: center;
   background-color: #12121a;
    background-image: url("background.png");
+   background-blend-mode : overlay; 
+  background-size : 15%;
 }
 h1 {
   font-size: 3em;
@@ -35,7 +39,7 @@ h2 {
   font-weight: bold;
   font-size: 1em;
   text-align: left;
-  color: #f1f1f1;
+  color: white;
 }
 .tabel {
   text-align: left;
@@ -44,6 +48,7 @@ h2 {
   margin: 0 auto;
   display: table;
   padding: 0 0 8em 0;
+  color: white;
 }
 
 .tabel td,
