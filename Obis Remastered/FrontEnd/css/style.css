@@ -6,7 +6,9 @@ body {
     background-image:url('http://artlantis-media.ru/static/img/0000/0002/7260/27260842.qvpm616fga.png');
     background-blend-mode:overlay;/*cat de mult sa fie transparent*/
     background-size:15%;
-
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
 
 }
 
