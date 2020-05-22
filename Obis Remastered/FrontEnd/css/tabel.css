@@ -1,0 +1,94 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  line-height: 1.4em;
+  overflow-y: auto;
+  background-color: #12121a;
+  background-image: url("background.png");
+  background-blend-mode : overlay; 
+  background-size : 15%;
+}
+
+.tot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #12121a;
+   background-image: url("background.png");
+   background-blend-mode : overlay; 
+  background-size : 15%;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  color: #f1f1f1;
+}
+h2 {
+  font-size: 1.7em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding-bottom: 1em;
+  color: #f1f1f1;
+}
+.tabel th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  color: white;
+}
+.tabel {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 8em 0;
+  color: white;
+}
+
+.tabel td,
+.tabel th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+.tabel th {
+  background-color: #1f2739;
+}
+.tabel tr:nth-child(1) {
+  background-color: #323c50;
+}
+.tabel tr:nth-child(3) {
+  background-color: #323c50;
+}
+.tabel tr:nth-child(5) {
+  background-color: #323c50;
+}
+.tabel tr:nth-child(2) {
+  background-color: #2c3446;
+}
+.tabel tr:nth-child(4) {
+  background-color: #2c3446;
+}
+.tabel tr:nth-child(6) {
+  background-color: #2c3446;
+}
+
+.tabel tr:hover {
+  background-color: #464a52;
+}
+.tabel td:hover {
+  background-color: #00bfa6;
+  font-weight: bold;
+  box-shadow: #00ac96 -1px 1px, #00ac96 -2px 2px, #00ac96 -3px 3px,
+    #00ac96 -4px 4px, #00ac96 -5px 5px, #00ac96 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  transition-duration: 0.4s;
+    transition-property: all;
+}
+
