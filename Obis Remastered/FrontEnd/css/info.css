@@ -22,59 +22,76 @@ body{
 
 .img-what-is{
 	background-image : url("../assets/undraw_questions_75e0.svg");
-  	background-size : 100% 100%; /*latimea si inaltimea, 100% inseamna ca zona e acoperita de o poza*/
-  	height : 200px;
-  	width : 200px;
-  	position : relative;
-  	border-radius : 50%;
-  	display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
-  	margin-top : 50px;
-  	margin-left : 2em;
+  background-size : 100% 100%; /*latimea si inaltimea, 100% inseamna ca zona e acoperita de o poza*/
+  height : 200px;
+  width : 200px;
+  position : relative;
+  border-radius : 50%;
+  display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
+  margin-top : 50px;
+  margin-left : 2em;
 }
 
 h1{
-    color: white;
-    text-align: center;
-    width: 100%;
-    margin:0;
-    font-size : 2em;
+  color : white;
+  text-align : center;
+  width : 100%;
+  margin : 0;
+  font-size : 2em;
+  margin-right : 0.5em;
+  line-height : 1.5em;
+  height : 3em;
 }
 
 .text{
 	display : flex;
 }
 
-.obesity-fade-in {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right : 5em;
-    margin-left : 2em;
-    width : 80%;
+.obesity-whatis-fade-in {
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  margin-right : 5em;
+  margin-left : 2em;
+  width : 80%;
+}
+
+.cause-fade-in{
+  display : flex;
+  flex-direction : column;
+  margin-right : 5em;
 }
 
 .causes{
-	display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: -10px;
+	display : flex;
+  flex-direction : row;
+  justify-content : flex-end;
+  margin-top : -10px;
 }
 
 .reasons-column{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width : 60%;
+  display : flex;
+  flex-direction : column;
+  align-items : center;
 }
 
 .img-cause{
 	background-image : url("../assets/undraw_speed_test_wxl0.svg");
-  	background-size : 100% 100%; /*latimea si inaltimea, 100% inseamna ca zona e acoperita de o poza*/
-  	height : 200px;
-  	width : 200px;
-  	position : relative;
-  	border-radius : 50%;
-  	display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
-  	margin-top : 50px;
-  	margin-left : 2em;
+  background-size : 100% 100%; /*latimea si inaltimea, 100% inseamna ca zona e acoperita de o poza*/
+  height : 200px;
+  width : 200px;
+  position : relative;
+  border-radius : 50%;
+  display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
+  margin-top : 50px;
+  margin-left : 2em;
 }
+
+.causes-column{
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+  width : 30%;
+}
+
