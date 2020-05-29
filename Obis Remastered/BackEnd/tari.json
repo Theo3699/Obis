@@ -1,0 +1,23 @@
+[
+  {
+    "country": "Romania",
+    "yearGrowth": 30,
+    "maleGrowth": 253,
+    "femaleGrowth": 312,
+    "curePercentage": 23
+  },
+  {
+    "country": "germania",
+    "yearGrowth": 132,
+    "maleGrowth": 2312,
+    "femaleGrowth": 332,
+    "curePercentage": 43
+  },
+  {
+    "country": "franta",
+    "yearGrowth": 13,
+    "maleGrowth": 232,
+    "femaleGrowth": 3322,
+    "curePercentage": 3
+  }
+]
