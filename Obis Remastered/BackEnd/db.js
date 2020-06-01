@@ -1,3 +1,19 @@
+var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/obis", {
+///obis este numele bazei de date pe care noi o accesam
+  useNewUrlParser: true,//To use the new parser, pass option
+  useUnifiedTopology: true,// open a connection to the test database on our locally running instance of MongoDB
+});
+
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function () {//We now need to get notified if we connect successfully or if a connection error occurs:
+  console.log("connected successfully to database");
+});
+
+
+
+
 var fs = require("fs");
 
 function length(obj) {
