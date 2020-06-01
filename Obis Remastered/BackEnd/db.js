@@ -11,7 +11,29 @@ db.once("open", function () {//We now need to get notified if we connect success
   console.log("connected successfully to database");
 });
 
-
+//creem schema 
+var countrySchema = new mongoose.Schema({
+    name: String,
+    year: Number,
+  }).index({//creeaza un index compus pentru aceasta schema 
+    name: 1,
+    year: 1
+  }, { 
+    unique: true//acesta trebuie sa fie unic, neputand avea doua tari cuacelasi nume si acelasi an
+  });
+  var Country = mongoose.model("Country", countrySchema);
+  
+  var dataSchema = new mongoose.Schema({
+    yearGrowth: Number,
+    maleGrowth: Number,
+    femaleGrowth: Number,
+    curePercentage: Number,
+    _id: {//Mongoose creates a new _id of type ObjectId to your document.
+      type: mongoose.Schema.Types.ObjectId,//un obiect cu subcategoriile de nume si an
+      ref: "Country",
+    },
+  });
+  var Data = mongoose.model("Data", dataSchema);
 
 
 var fs = require("fs");
