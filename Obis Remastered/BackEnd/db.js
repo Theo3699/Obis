@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/obis", {
-///obis este numele bazei de date pe care noi o accesam
+  ///obis este numele bazei de date pe care noi o accesam
   useNewUrlParser: true,//To use the new parser, pass option
   useUnifiedTopology: true,// open a connection to the test database on our locally running instance of MongoDB
 });
@@ -13,114 +13,110 @@ db.once("open", function () {//We now need to get notified if we connect success
 
 //creem schema 
 var countrySchema = new mongoose.Schema({
-    name: String,
-    year: Number,
-  }).index({//creeaza un index compus pentru aceasta schema 
-    name: 1,
-    year: 1
-  }, { 
-    unique: true//acesta trebuie sa fie unic, neputand avea doua tari cuacelasi nume si acelasi an
-  });
-  var Country = mongoose.model("Country", countrySchema);
-  
-  var dataSchema = new mongoose.Schema({
-    yearGrowth: Number,
-    maleGrowth: Number,
-    femaleGrowth: Number,
-    curePercentage: Number,
-    _id: {//Mongoose creates a new _id of type ObjectId to your document.
-      type: mongoose.Schema.Types.ObjectId,//un obiect cu subcategoriile de nume si an
-      ref: "Country",
-    },
-  });
-  var Data = mongoose.model("Data", dataSchema);
+  name: String,
+  year: Number,
+}).index({//creeaza un index compus pentru aceasta schema 
+  name: 1,
+  year: 1
+}, {
+  unique: true//acesta trebuie sa fie unic, neputand avea doua tari cuacelasi nume si acelasi an
+});
+var Country = mongoose.model("Country", countrySchema);
+
+var dataSchema = new mongoose.Schema({
+  yearGrowth: Number,
+  maleGrowth: Number,
+  femaleGrowth: Number,
+  curePercentage: Number,
+  _id: {//Mongoose creates a new _id of type ObjectId to your document.
+    type: mongoose.Schema.Types.ObjectId,//un obiect cu subcategoriile de nume si an
+    ref: "Country",
+  },
+});
+var Data = mongoose.model("Data", dataSchema);
 
 
-  function createCountry(countryObj) {
-    return new Promise((resolve) => {
-      if (!isValidCountry(countryObj)) {
-        resolve("error");
-      } else {
-        const newCountry = new Country(countryObj);
-        newCountry
-          .save()
-          .then((doc) => {//we get acces to the document that we just saved in our DB
-            resolve(doc);
-          })
-          .catch((err) => {//daca este vreo eroare in salvarea in baza de date, o "prindem"
-            resolve(err);
-          });
-      }
-    });
-  }
-
-  function createData(data) {
-    return new Promise((resolve) => {
-      if (!isValidData(data)) {
-        resolve("error");//datele date nu sunt valide
-      } else {
-        const newData = new Data({
-          ...data,
-          _id: data.id,
+function createCountry(countryObj) {
+  return new Promise((resolve) => {
+    if (!isValidCountry(countryObj)) {
+      resolve("error");
+    } else {
+      const newCountry = new Country(countryObj);
+      newCountry
+        .save()
+        .then((doc) => {//we get acces to the document that we just saved in our DB
+          resolve(doc);
+        })
+        .catch((err) => {//daca este vreo eroare in salvarea in baza de date, o "prindem"
+          resolve(err);
         });
-        newData
-          .save()
-          .then((doc) => {
-            resolve(doc);//the response
-          })
-          .catch((err) => {//any error that shows up
-            resolve(err.message);
-          });
-      }
-    });
+    }
+  });
+}
+
+function createData(data) {
+  return new Promise((resolve) => {
+    if (!isValidData(data)) {
+      resolve("error");//datele date nu sunt valide
+    } else {
+      const newData = new Data({
+        ...data,
+        _id: data.id,
+      });
+      newData
+        .save()
+        .then((doc) => {
+          resolve(doc);//the response
+        })
+        .catch((err) => {//any error that shows up
+          resolve(err.message);
+        });
+    }
+  });
+}
+
+function getCountries() {
+  return Country.find();//returnam toate tarile din baza de date
+}
+
+function isValidCountry(country) {
+  if (country.name === undefined) {
+    return false;//testam numele
   }
-  
-  function getCountries() {
-    return Country.find();//returnam toate tarile din baza de date
+  if (country.year === undefined) {
+    return false;//testam anul
   }
 
-  function isValidCountry(country) {
-    if (country.name === undefined) {
-      return false;//testam numele
-    }
-    if (country.year === undefined) {
-      return false;//testam anul
-    }
-  
-    return true;
-  }
+  return true;
+}
 
 
-  function isValidData(data) {
-    console.log(data);
-  
-    if (data.yearGrowth === undefined) {
-      return false;
-    }
-  
-    if (data.maleGrowth === undefined) {
-      return false;
-    }
-  
-    if (data.femaleGrowth === undefined) {
-      return false;
-    }
-  
-    if (data.curePercentage === undefined) {
-      return false;
-    }
-    return true;
+function isValidData(data) {
+  console.log(data);
+
+  if (data.yearGrowth === undefined) {
+    return false;
   }
-  
+
+  if (data.maleGrowth === undefined) {
+    return false;
+  }
+
+  if (data.femaleGrowth === undefined) {
+    return false;
+  }
+
+  if (data.curePercentage === undefined) {
+    return false;
+  }
+  return true;
+}
+
 var fs = require("fs");
 
 /*function length(obj) {
     return Object.keys(obj).length;
 }
-
-
-//function createCountry(countryObj)
-//function getCountries
 
 fs.readFile("./tari.json", 'utf-8', (err, data) => {
 
