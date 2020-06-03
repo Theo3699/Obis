@@ -54,6 +54,27 @@ var countrySchema = new mongoose.Schema({
     });
   }
 
+  function createData(data) {
+    return new Promise((resolve) => {
+      if (!isValidData(data)) {
+        resolve("error");//datele date nu sunt valide
+      } else {
+        const newData = new Data({
+          ...data,
+          _id: data.id,
+        });
+        newData
+          .save()
+          .then((doc) => {
+            resolve(doc);//the response
+          })
+          .catch((err) => {//any error that shows up
+            resolve(err.message);
+          });
+      }
+    });
+  }
+  
   function getCountries() {
     return Country.find();//returnam toate tarile din baza de date
   }
@@ -68,10 +89,32 @@ var countrySchema = new mongoose.Schema({
   
     return true;
   }
+
+
+  function isValidData(data) {
+    console.log(data);
+  
+    if (data.yearGrowth === undefined) {
+      return false;
+    }
+  
+    if (data.maleGrowth === undefined) {
+      return false;
+    }
+  
+    if (data.femaleGrowth === undefined) {
+      return false;
+    }
+  
+    if (data.curePercentage === undefined) {
+      return false;
+    }
+    return true;
+  }
   
 var fs = require("fs");
 
-function length(obj) {
+/*function length(obj) {
     return Object.keys(obj).length;
 }
 
@@ -98,4 +141,4 @@ fs.readFile("./tari.json", 'utf-8', (err, data) => {
 
     console.log("Tara " + countries[which].country + " are cea mai mare crestere de obezitate " + `${winner}`);
     //some countries to compare
-});
+});*/
