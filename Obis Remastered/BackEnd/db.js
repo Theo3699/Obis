@@ -36,6 +36,39 @@ var countrySchema = new mongoose.Schema({
   var Data = mongoose.model("Data", dataSchema);
 
 
+  function createCountry(countryObj) {
+    return new Promise((resolve) => {
+      if (!isValidCountry(countryObj)) {
+        resolve("error");
+      } else {
+        const newCountry = new Country(countryObj);
+        newCountry
+          .save()
+          .then((doc) => {//we get acces to the document that we just saved in our DB
+            resolve(doc);
+          })
+          .catch((err) => {//daca este vreo eroare in salvarea in baza de date, o "prindem"
+            resolve(err);
+          });
+      }
+    });
+  }
+
+  function getCountries() {
+    return Country.find();//returnam toate tarile din baza de date
+  }
+
+  function isValidCountry(country) {
+    if (country.name === undefined) {
+      return false;//testam numele
+    }
+    if (country.year === undefined) {
+      return false;//testam anul
+    }
+  
+    return true;
+  }
+  
 var fs = require("fs");
 
 function length(obj) {
