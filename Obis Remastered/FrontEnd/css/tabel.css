@@ -91,4 +91,13 @@ h2 {
   transition-duration: 0.4s;
     transition-property: all;
 }
-
+@media (max-width: 360px) {
+  .tabel td:nth-child(4),
+  .tabel th:nth-child(4) {
+    display: none;
+  }
+@media (max-width: 360px) {
+  .tabel td:nth-child(5),
+  .tabel th:nth-child(5) {
+    display: none;
+  }
