@@ -25,6 +25,18 @@ var countrySchema = new mongoose.Schema({
 );
 var Country = mongoose.model("Country", countrySchema);
 
+var dataSchema = new mongoose.Schema({
+    yearGrowth: Number,
+    maleGrowth: Number,
+    femaleGrowth: Number,
+    curePercentage: Number,
+    _id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Country",
+    },
+});
+var Data = mongoose.model("Data", dataSchema);
+
 const countryObjects = [
     {
         name: "franta",
@@ -76,7 +88,88 @@ const countryObjects = [
     },
 ];
 
-countryObjects.forEach((country) => {
+const dataObjects = [
+    {
+        yearGrowth: 0,
+        maleGrowth: 1,
+        curePercentage: 1,
+        femaleGrowth: 2,
+    },
+    {
+        yearGrowth: 112,
+        maleGrowth: 3,
+        curePercentage: 10,
+        femaleGrowth: 2,
+    },
+    {
+        yearGrowth: 0123,
+        maleGrowth: 199,
+        curePercentage: 188,
+        femaleGrowth: 26,
+    },
+    {
+        yearGrowth: 023,
+        maleGrowth: 123,
+        curePercentage: 123,
+        femaleGrowth: 26,
+    },
+    {
+        yearGrowth: 1,
+        maleGrowth: 1,
+        curePercentage: 13,
+        femaleGrowth: 24,
+    },
+    {
+        yearGrowth: 1,
+        maleGrowth: 1,
+        curePercentage: 1432,
+        femaleGrowth: 24,
+    },
+    {
+        yearGrowth: 0,
+        maleGrowth: 1,
+        curePercentage: 1,
+        femaleGrowth: 2,
+    },
+    {
+        yearGrowth: 112,
+        maleGrowth: 3,
+        curePercentage: 10,
+        femaleGrowth: 2,
+    },
+    {
+        yearGrowth: 0123,
+        maleGrowth: 199,
+        curePercentage: 188,
+        femaleGrowth: 26,
+    },
+    {
+        yearGrowth: 023,
+        maleGrowth: 123,
+        curePercentage: 123,
+        femaleGrowth: 26,
+    },
+    {
+        yearGrowth: 1,
+        maleGrowth: 1,
+        curePercentage: 13,
+        femaleGrowth: 24,
+    },
+    {
+        yearGrowth: 1,
+        maleGrowth: 1,
+        curePercentage: 1432,
+        femaleGrowth: 24,
+    },
+];
+
+countryObjects.forEach((country, index) => {
     const newCountry = new Country(country);
-    newCountry.save();
+    newCountry.save().then((doc) => {
+        const newData = new Data(dataObjects[index]);
+
+        newData["_id"] = doc._id;
+        newData.save();
+    });
 });
+
