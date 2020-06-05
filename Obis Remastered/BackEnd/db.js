@@ -60,7 +60,10 @@ function createData(data) {
       resolve("error");//datele date nu sunt valide
     } else {
       const newData = new Data({
-        ...data,
+        yearGrowth: data.yearGrowth,
+        maleGrowth: data.maleGrowth,
+        curePercentage: data.curePercentage,
+        femaleGrowth: data.femaleGrowth,
         _id: data.id,
       });
       newData
@@ -113,6 +116,12 @@ function isValidData(data) {
 }
 
 var fs = require("fs");
+
+
+
+
+
+
 
 /*function length(obj) {
     return Object.keys(obj).length;

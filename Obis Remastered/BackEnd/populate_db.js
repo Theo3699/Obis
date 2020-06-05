@@ -37,6 +37,92 @@ var dataSchema = new mongoose.Schema({
 });
 var Data = mongoose.model("Data", dataSchema);
 
+
+function createCountry(countryObj) {
+    return new Promise((resolve) => {
+      if (!isValidCountry(countryObj)) {
+        resolve("error");
+      } else {
+        const newCountry = new Country(countryObj);
+        newCountry
+          .save()
+          .then((doc) => {//we get acces to the document that we just saved in our DB
+            resolve(doc);
+          })
+          .catch((err) => {//daca este vreo eroare in salvarea in baza de date, o "prindem"
+            resolve(err);
+          });
+      }
+    });
+  }
+  
+  function createData(data) {
+    return new Promise((resolve) => {
+      if (!isValidData(data)) {
+        resolve("error");//datele date nu sunt valide
+      } else {
+        const newData = new Data({
+          yearGrowth: data.yearGrowth,
+          maleGrowth: data.maleGrowth,
+          curePercentage: data.curePercentage,
+          femaleGrowth: data.femaleGrowth,
+          _id: data.id,
+        });
+        newData
+          .save()
+          .then((doc) => {
+            resolve(doc);//the response
+          })
+          .catch((err) => {//any error that shows up
+            resolve(err.message);
+          });
+      }
+    });
+  }
+  
+  function getCountries() {
+    return Country.find();//returnam toate tarile din baza de date
+  }
+  
+  function isValidCountry(country) {
+    if (country.name === undefined) {
+      return false;//testam numele
+    }
+    if (country.year === undefined) {
+      return false;//testam anul
+    }
+  
+    return true;
+  }
+  
+  
+  function isValidData(data) {
+    console.log(data);
+  
+    if (data.yearGrowth === undefined) {
+      return false;
+    }
+  
+    if (data.maleGrowth === undefined) {
+      return false;
+    }
+  
+    if (data.femaleGrowth === undefined) {
+      return false;
+    }
+  
+    if (data.curePercentage === undefined) {
+      return false;
+    }
+    return true;
+  }
+
+
+
+
+
+
+
 const countryObjects = [
     {
         name: "franta",
@@ -165,11 +251,11 @@ const dataObjects = [
 
 countryObjects.forEach((country, index) => {
     const newCountry = new Country(country);
-    newCountry.save().then((doc) => {
-        const newData = new Data(dataObjects[index]);
-
-        newData["_id"] = doc._id;
-        newData.save();
-    });
-});
-
+    createCountry(newCountry);
+  });
+  
+  countryObjects.forEach((data, index) => {
+    console.log(dataObjects[index]);
+    const newData = new Data(dataObjects[index]);
+    createData(newData);
+  });
