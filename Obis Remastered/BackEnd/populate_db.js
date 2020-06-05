@@ -38,7 +38,7 @@ var dataSchema = new mongoose.Schema({
 var Data = mongoose.model("Data", dataSchema);
 
 
-function createCountry(countryObj) {
+/*function createCountry(countryObj) {
     return new Promise((resolve) => {
       if (!isValidCountry(countryObj)) {
         resolve("error");
@@ -79,7 +79,7 @@ function createCountry(countryObj) {
       }
     });
   }
-  
+  */
   function getCountries() {
     return Country.find();//returnam toate tarile din baza de date
   }
@@ -250,12 +250,10 @@ const dataObjects = [
 ];
 
 countryObjects.forEach((country, index) => {
-    const newCountry = new Country(country);
-    createCountry(newCountry);
-  });
-  
-  countryObjects.forEach((data, index) => {
-    console.log(dataObjects[index]);
+  const newCountry = new Country(country);
+  newCountry.save().then((doc) => {
     const newData = new Data(dataObjects[index]);
-    createData(newData);
+    newData["_id"] = doc._id;
+    newData.save();
   });
+});
