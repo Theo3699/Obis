@@ -177,7 +177,81 @@ function getDataById(id) {
 getDataById("5ed7f2903b076610f0cbce90");//working as intended
 //getDataById("5ed7f290326610f0cwwbce90");//not working as intended - id doesn't exist in db
 
-//firstId=${country1}&secondId=${country2}&criterias=${criteria}
+//firstId=${country1}&secondId=${country2}&criterias=${criteria}obj
+function isValidCompare(obj) {
+  return new Promise((resolve) => {
+    Country.find({
+      _id: obj.firstId,
+    }).then((first) => {
+      if (first === undefined) {
+        throw Error("first id not found");
+      } else {
+        Country.find({
+          _id: obj.secondId,
+        }).then((second) => {
+          if (second === undefined) {
+            throw Error("second id not found");
+          } else {
+            resolve("true");
+          }
+        });
+      }
+    });
+  });
+}
+
+function compare(body) {
+  return new Promise((resolve) => {
+    isValidCompare(body).then(() => {
+      getDataById(body.firstId)
+        .then((firstObj) => {
+          getDataById(body.secondId).then((secondObj) => {
+            const result = {
+              winner: {},
+              firstCountry: firstObj,
+              secondCountry: secondObj,
+            };
+            let firstObjectAdvantage = {
+              sum: 0,
+            };
+
+            body.criterias.split(",").forEach((criteria) => {
+              firstObjectAdvantage[criteria] =
+                parseInt(firstObj[criteria]) - parseInt(secondObj[criteria]);
+              firstObjectAdvantage.sum += firstObjectAdvantage[criteria];
+            });
+            if (firstObjectAdvantage.sum === 0) {
+              result.winner = "tie";
+              resolve(result);
+            }
+
+            if (firstObjectAdvantage.sum > 0) {
+              result.winner = firstObjectAdvantage;
+              console.log(result);
+
+              result.winner.id = firstObj.id;
+              resolve(result);
+            } else {
+              if (firstObjectAdvantage.sum < 0) {
+                Object.keys({
+                  ...firstObjectAdvantage,
+                }).forEach((key) => {
+                  firstObjectAdvantage[key] *= -1;
+                });
+                result.winner = firstObjectAdvantage;
+                result.winner.id = secondObj.id;
+                resolve(result);
+              }
+            }
+          });
+        })
+        .catch((err) => {
+          resolve(err);
+        });
+    });
+  });
+}
+
 
 
 

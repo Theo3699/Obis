@@ -1,11 +1,21 @@
 const db = require("./db");
 
+//firstId=${country1}&secondId=${country2}&criterias=${criteria}
+function handleCompare(req, body) {
+    if (req.method === "GET") {
+        console.log("facem compare"); // to be deleted
+
+        return db.compare(body);
+    }
+}
+
+
 
 function handleCsv(req, body) {
     const pathname = url.parse(req.url).pathname;
 
     const options = {
-        keys : [
+        keys: [
             "name",
             "year",
             "yearGrowth",
