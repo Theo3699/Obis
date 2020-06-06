@@ -1,14 +1,14 @@
 const goToTable = () => {
-    const iframe = document.querySelector('#content');
-    iframe.src = 'html/tabel.html';
+    const iframe = document.querySelector('#home');
+    iframe.src = '../html/tabel.html';
 }
 
 const goToBarChart=()=>{
-    const iframe=document.querySelector('#content');
-    iframe.src='html/grafic.html';
+    const iframe=document.querySelector('#home');
+    iframe.src='../html/tabel.html';
 }
 
 const goToLineChart=()=>{
-    const iframe=document.querySelector('#content');
-    iframe.src='html/grafic1.html';
+    const iframe=document.querySelector('#home');
+    iframe.src='../html/tabel.html';
 }

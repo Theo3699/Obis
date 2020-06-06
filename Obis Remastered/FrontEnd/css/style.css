@@ -76,12 +76,16 @@ iframe {
     body {
         overflow: auto;
     }
+    .logo img {
+    height: 70px;
+}
 }
 
 @media (min-width: 1024px) and (max-width: 1366px) {
     body {
         overflow: hidden;
     }
+
     .logo,
     .menu {
         padding: 0px 50px;
@@ -92,6 +96,7 @@ iframe {
     body {
         overflow-x:hidden;
     }
+ 
     .logo,
     .menu {
         padding: 0px 50px;
@@ -102,6 +107,9 @@ iframe {
     .logo img {
         padding:20px;
     }
+    .logo img {
+    width: 250%;
+}
     iframe {
         
         top: 155px;
