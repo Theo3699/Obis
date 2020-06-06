@@ -168,82 +168,74 @@ const countryObjects = [
 
 const dataObjects = [
     {
-        yearGrowth: 0,
+        yearGrowth: -0.7,
         maleGrowth: -0.5,
-        curePercentage: 1,
+        curePercentage: 0.7,
         femaleGrowth: 0.4,
         //2018
     },
     {
-        yearGrowth: 112,
+        yearGrowth: 1.5,
         maleGrowth: -1.1,
-        curePercentage: 10,
+        curePercentage: 0,
         femaleGrowth: 2.2,
         //2017
     },
     {
-        yearGrowth: 0123,
+        yearGrowth: 0.3,
         maleGrowth: 1.3,
-        curePercentage: 188,
+        curePercentage: 0,
         femaleGrowth: -1.2,
         //2016
     },
     {
-        yearGrowth: 023,
+        yearGrowth: 0.3,
         maleGrowth: 0.8,
-        curePercentage: 123,
+        curePercentage: 0,
         femaleGrowth: 3.5,
         //2015
     },
     {
-        yearGrowth: 1.1,
+        yearGrowth: 0.6,
         maleGrowth: 3.2,
-        curePercentage: 13,
+        curePercentage: 0,
         femaleGrowth: -1.6,
         //2014 Alabama
     },
     {
-        yearGrowth: 1,
-        maleGrowth: 1,
+        yearGrowth: -4.7,
+        maleGrowth: -2.2,
         curePercentage: 1432,
-        femaleGrowth: 24,
+        femaleGrowth: -7.6,
         //2018 Alaska
     },
     {
-        yearGrowth: 0,
-        maleGrowth: 1,
+        yearGrowth: 2.8,
+        maleGrowth: 0.3,
         curePercentage: 1,
-        femaleGrowth: 2,
+        femaleGrowth: 5.8,
+        //2017 Alaska
     },
     {
-        yearGrowth: 112,
+        yearGrowth: 1.6,
         maleGrowth: 3,
         curePercentage: 10,
-        femaleGrowth: 2,
+        femaleGrowth: -0.2,
+        //2016 Alaska
     },
     {
-        yearGrowth: 0123,
-        maleGrowth: 199,
+        yearGrowth: 0.1,
+        maleGrowth: 0,
         curePercentage: 188,
-        femaleGrowth: 26,
+        femaleGrowth: 0.3,
+        //2015 Alaska
     },
     {
-        yearGrowth: 023,
-        maleGrowth: 123,
+        yearGrowth: 1.3,
+        maleGrowth: 0.1,
         curePercentage: 123,
-        femaleGrowth: 26,
-    },
-    {
-        yearGrowth: 1,
-        maleGrowth: 1,
-        curePercentage: 13,
-        femaleGrowth: 24,
-    },
-    {
-        yearGrowth: 1,
-        maleGrowth: 1,
-        curePercentage: 1432,
-        femaleGrowth: 24,
+        femaleGrowth: 2.7,
+        //2014 Alaska
     },
 ];
 
