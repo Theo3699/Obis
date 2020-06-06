@@ -1,4 +1,40 @@
 const db = require("./db");
+const url = require("url");
+const converter = require("json-2-csv");
+const fs = require("fs");
+module.exports = (req, body) => {
+    const pathname = url.parse(req.url).pathname;
+  
+    if (pathname === "/data/country") {
+      return handleCountry(req, body);
+    }
+  
+    if (pathname === "/data") {
+      return handleData(req, body);
+    }
+
+    if (pathname.startsWith("/csv")) {
+      return handleCsv(req, body);
+    }
+  };
+  
+  function handleCountry(req, body) {
+    if (req.method === "GET") {
+      return db.getCountries();
+    }
+    if (req.method === "POST") {
+      return db.createCountry(body);
+    }
+  }
+  
+  function handleData(req, body) {
+    if (req.method === "GET") {
+      return db.getData(body);
+    }
+    if (req.method === "POST") {
+      return db.createData(body);
+    }
+  }
 
 
 function handleCsv(req, body) {
