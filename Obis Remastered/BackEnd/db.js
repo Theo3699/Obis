@@ -23,6 +23,7 @@ var countrySchema = new mongoose.Schema({
 });
 var Country = mongoose.model("Country", countrySchema);
 
+
 var dataSchema = new mongoose.Schema({
   yearGrowth: Number,
   maleGrowth: Number,
@@ -115,35 +116,66 @@ function isValidData(data) {
   return true;
 }
 
-var fs = require("fs");
+//
 
-
-
-
-
-
-
-/*function length(obj) {
-    return Object.keys(obj).length;
+function addAllProps(country, data) {
+  return {
+    id: country._id,
+    name: country.name,
+    year: country.year,
+    yearGrowth: data.yearGrowth,
+    maleGrowth: data.maleGrowth,
+    femaleGrowth: data.femaleGrowth,
+    curePercentage: data.curePercentage,
+  };
 }
 
-fs.readFile("./tari.json", 'utf-8', (err, data) => {
+function addPartialProps(country) {
+  return {
+    id: country._id,
+    name: country.name,
+    year: country.year,
+    yearGrowth: "",
+    maleGrowth: "",
+    femaleGrowth: "",
+    curePercentage: "",
+  };
+}
 
+function getDataById(id) {
+  return new Promise((resolve) => {
+    Country.find({
+      _id: id,
+    }).then((countryDoc) => {
+      if (countryDoc === undefined) {
+        throw new Error("id not found");
+      }
 
-    const countries = JSON.parse(data);
-    var winner = 0;
-    var which = 0;
+      //console.log(countryDoc);
+      //console.log(countryDoc[0]);
+      countryDoc = countryDoc[0];
+      isValidCountry(countryDoc);
+      Data.find({
+        _id: countryDoc._id,
+      }).then((dataDoc) => {
+        //console.log(dataDoc);
+        //console.log(dataDoc[0]);
 
-    for (i in countries) {
-        console.log(countries[i].country)
-        if (countries[i].yearGrowth > winner) {
-            winner = countries[i].yearGrowth;
-            which = i;
+        dataDoc = dataDoc[0];
+        if (dataDoc === undefined) {
+          resolve(addPartialProps(countryDoc));
+        } else {
+          const result = addAllProps(countryDoc, dataDoc);
+          resolve(result);
+          console.log(result);
         }
+      });
+    });
+  });
+}
+
+getDataById("5ed7f2903b076610f0cbce90");//working as intended
+//getDataById("5ed7f290326610f0cwwbce90");//not working as intended - id doesn't exist in db
 
 
-    }
 
-    console.log("Tara " + countries[which].country + " are cea mai mare crestere de obezitate " + `${winner}`);
-    //some countries to compare
-});*/
