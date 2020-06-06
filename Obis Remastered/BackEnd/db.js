@@ -116,17 +116,17 @@ function isValidData(data) {
   return true;
 }
 
-//
+//functionality
 
 function addAllProps(country, data) {
   return {
     id: country._id,
     name: country.name,
     year: country.year,
-    yearGrowth: data.yearGrowth,
-    maleGrowth: data.maleGrowth,
-    femaleGrowth: data.femaleGrowth,
-    curePercentage: data.curePercentage,
+    yearGrowth: data.yearGrowth,//how much increased by year
+    maleGrowth: data.maleGrowth,//how much increasead by year(male)
+    femaleGrowth: data.femaleGrowth,//how much incresead by year(female)
+    curePercentage: data.curePercentage,//how much decreased 
   };
 }
 
@@ -154,7 +154,7 @@ function getDataById(id) {
       //console.log(countryDoc);
       //console.log(countryDoc[0]);
       countryDoc = countryDoc[0];
-      isValidCountry(countryDoc);
+      //isValidCountry(countryDoc);
       Data.find({
         _id: countryDoc._id,
       }).then((dataDoc) => {
@@ -176,6 +176,10 @@ function getDataById(id) {
 
 getDataById("5ed7f2903b076610f0cbce90");//working as intended
 //getDataById("5ed7f290326610f0cwwbce90");//not working as intended - id doesn't exist in db
+
+//firstId=${country1}&secondId=${country2}&criterias=${criteria}
+
+
 
 
 
