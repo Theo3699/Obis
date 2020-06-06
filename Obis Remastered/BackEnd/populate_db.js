@@ -125,91 +125,89 @@ var Data = mongoose.model("Data", dataSchema);
 
 const countryObjects = [
     {
-        name: "franta",
-        year: 2020,
-    },
-    {
-        name: "franta",
-        year: 2019,
-    },
-    {
-        name: "franta",
+        name: "alabama",
         year: 2018,
     },
     {
-        name: "franta",
+        name: "alabama",
         year: 2017,
     },
     {
-        name: "franta",
+        name: "alabama",
         year: 2016,
     },
     {
-        name: "franta",
+        name: "alabama",
         year: 2015,
     },
     {
-        name: "romania",
-        year: 2020,
+        name: "alabama",
+        year: 2014,
     },
     {
-        name: "romania",
-        year: 2019,
-    },
-    {
-        name: "romania",
+        name: "alaska",
         year: 2018,
     },
     {
-        name: "romania",
+        name: "alaska",
         year: 2017,
     },
     {
-        name: "romania",
+        name: "alaska",
         year: 2016,
     },
     {
-        name: "romania",
+        name: "alaska",
         year: 2015,
+    },
+    {
+        name: "alaska",
+        year: 2014,
     },
 ];
 
 const dataObjects = [
     {
         yearGrowth: 0,
-        maleGrowth: 1,
+        maleGrowth: -0.5,
         curePercentage: 1,
-        femaleGrowth: 2,
+        femaleGrowth: 0.4,
+        //2018
     },
     {
         yearGrowth: 112,
-        maleGrowth: 3,
+        maleGrowth: -1.1,
         curePercentage: 10,
-        femaleGrowth: 2,
+        femaleGrowth: 2.2,
+        //2017
     },
     {
         yearGrowth: 0123,
-        maleGrowth: 199,
+        maleGrowth: 1.3,
         curePercentage: 188,
-        femaleGrowth: 26,
+        femaleGrowth: -1.2,
+        //2016
     },
     {
         yearGrowth: 023,
-        maleGrowth: 123,
+        maleGrowth: 0.8,
         curePercentage: 123,
-        femaleGrowth: 26,
+        femaleGrowth: 3.5,
+        //2015
     },
     {
-        yearGrowth: 1,
-        maleGrowth: 1,
+        yearGrowth: 1.1,
+        maleGrowth: 3.2,
         curePercentage: 13,
-        femaleGrowth: 24,
+        femaleGrowth: -1.6,
+        //2014 Alabama
     },
     {
         yearGrowth: 1,
         maleGrowth: 1,
         curePercentage: 1432,
         femaleGrowth: 24,
+        //2018 Alaska
     },
     {
         yearGrowth: 0,
