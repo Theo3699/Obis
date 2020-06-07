@@ -140,8 +140,14 @@ function getData({ country }) {
   });
 }
 
-
-
+//exportul functiilor
+module.exports = {
+  createCountry,
+  getCountries,
+  createData,
+  getData,
+  compare,
+};
 
 //functionality
 
