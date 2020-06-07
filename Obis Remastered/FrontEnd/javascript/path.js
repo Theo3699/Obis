@@ -5,10 +5,10 @@ const goToTable = () => {
 
 const goToBarChart=()=>{
     const iframe=document.querySelector('#home');
-    iframe.src='../html/tabel.html';
+    iframe.src='../html/charts.html';
 }
 
 const goToLineChart=()=>{
     const iframe=document.querySelector('#home');
-    iframe.src='../html/tabel.html';
+    iframe.src='../html/statistics.html';
 }
