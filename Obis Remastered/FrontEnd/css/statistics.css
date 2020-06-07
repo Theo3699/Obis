@@ -25,3 +25,30 @@ h1 {
     height: 40vh;
     width: 80vw;
 }
+
+button {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 4px;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1em 0;
+    line-height: 2.8em;
+    padding: 0 2em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    font-weight: 300;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.save-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}

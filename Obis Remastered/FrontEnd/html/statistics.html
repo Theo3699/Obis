@@ -8,15 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/statistics.css">
+    <link rel="stylesheet" type="text/css" href="../css/charts.css">
 
 </head>
 
 <body>
     <div class="container">
         <h1><strong>Obesity </strong>Statistics</h1>
-        <canvas id="lineChart" width="50px" height="50px"></canvas>
+        <div class="filters-container">
+            <div class="select-container">
+                <label for="country">Country:</label>
+                <select id="country" onchange="fetchData()">
+                </select>
+            </div>
+        </div>
+        <canvas id="lineChart"></canvas>
     </div>
-    Insert line chart here..
     <script src='../javascript/node_modules/chart.js/dist/Chart.js'></script>
     <script src='../javascript/stats.js'></script>
 

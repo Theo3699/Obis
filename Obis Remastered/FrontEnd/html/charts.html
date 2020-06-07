@@ -13,21 +13,39 @@
 
 <body>
     <div class="container">
-        <h1>
-            <strong>
-                Obesity
-            </strong>
-            Statistics
-        </h1>
-        <h2>
-            Compare Data
-        </h2>
-        Insert chart here
-        <canvas id="barChart" width="50px" height="50px"></canvas>
-        <script src='../javascript/node_modules/chart.js/dist/Chart.js'></script>
-        <script src='../javascript/Chart.js'></script>
-
+        <h1><strong>Obesity </strong>Statistics</h1>
+        <div class="filters-container">
+            <div class="select-container">
+                <label for="country1">First country:</label>
+                <select id="country1">
+                </select>
+            </div>
+            <div class="select-container">
+                <label for="country2">Second country:</label>
+                <select id="country2">
+                </select>
+            </div>
+            <div class="select-container">
+                <label for="criteria">Criteria:</label>
+                <select multiple id="criteria">
+                    <option value="yearGrowth">Year Growth</option>
+                    <option value="maleGrowth">Male Growth</option>
+                    <option value="femaleGrowth">Female Growth</option>
+                    <option value="curePercentage">Cure Percentage</option>
+                </select>
+            </div>
+        </div>
+        <div class="filters-container">
+            <button onclick="compareData()">SUBMIT FILTERS</button>
+        </div>
+        <h2 id="warning" class="warning-message">Please choose different countries and select at least 1 criteria!</h2>
+        <canvas id="barChart"></canvas>
     </div>
+    <canvas id="barChart" width="50px" height="50px"></canvas>
+    <script src='../javascript/node_modules/chart.js/dist/Chart.js'></script>
+    <script src='../javascript/Chart.js'></script>
+
+
 </body>
 
 </html>
