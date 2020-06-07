@@ -289,21 +289,21 @@ const dataObjects = [
     {
       yearGrowth: 1.3,
       maleGrowth: 1.5,
-      curePercentage: -1.3,
+      curePercentage: 0,
       femaleGrowth: -0.2,
       //2018 California
   },
   {
       yearGrowth:0.2,
       maleGrowth: -0.4,
-      curePercentage: -0.2,
+      curePercentage: 0,
       femaleGrowth: 0.6,
       //2017 California
   },
   {
       yearGrowth: 1.9,
       maleGrowth: 0.3,
-      curePercentage: -1.9,
+      curePercentage: 0,
       femaleGrowth: 1.5,
       //2016 California
   },
@@ -317,10 +317,48 @@ const dataObjects = [
   {
       yearGrowth: 1.2,
       maleGrowth: -1.1,
-      curePercentage: -1.2,
+      curePercentage: 0,
       femaleGrowth: 2.3,
       //2014 California
   },
+
+
+
+  {
+    yearGrowth: 0.7,
+    maleGrowth: 0.3,
+    curePercentage: 0,
+    femaleGrowth: 0.4,
+    //2018 Colorado
+},
+{
+    yearGrowth: 0.7,
+    maleGrowth: -0.9,
+    curePercentage: 0,
+    femaleGrowth: 1.6,
+    //2017 Colorado
+},
+{
+    yearGrowth: 4.2,
+    maleGrowth: 2.2,
+    curePercentage: 0,
+    femaleGrowth: 2.0,
+    //2016 Colorado
+},
+{
+    yearGrowth:-2.2,
+    maleGrowth: 0-1.7,
+    curePercentage: 2.2,
+    femaleGrowth: -0.5,
+    //2015 Colorado
+},
+{
+    yearGrowth: 0,
+    maleGrowth: 1.1,
+    curePercentage: 0,
+    femaleGrowth: -1.1,
+    //2014 Colorado
+},
 
 
 ];
