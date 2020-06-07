@@ -164,7 +164,77 @@ const countryObjects = [
         name: "alaska",
         year: 2014,
     },
+    {
+        name: "florida",
+        year: 2018,
+    },
+    {
+        name: "florida",
+        year: 2017,
+    },
+    {
+        name: "florida",
+        year: 2016,
+    },
+    {
+        name: "florida",
+        year: 2015,
+    },
+    {
+        name: "florida",
+        year: 2014,
+    },
 
+
+
+
+
+    
+    {
+        name: "michigan",
+        year: 2018,
+    },
+    {
+        name: "michigan",
+        year: 2017,
+    },
+    {
+        name: "michigan",
+        year: 2016,
+    },
+    {
+        name: "michigan",
+        year: 2015,
+    },
+    {
+        name: "michigan",
+        year: 2014,
+    },
+    {
+        name: "arkansas",
+        year: 2018,
+    },
+    {
+        name: "arkansas",
+        year: 2017,
+    },
+    {
+        name: "arkansas",
+        year: 2016,
+    },
+    {
+        name: "arkansas",
+        year: 2015,
+    },
+    {
+        name: "arkansas",
+        year: 2014,
+    },
+
+
+
+
+    
 
     {
       name: "California",
@@ -217,7 +287,7 @@ const dataObjects = [
         maleGrowth: -0.5,
         curePercentage: 0.7,
         femaleGrowth: 0.4,
-        //2018
+        //2018 Alabama
     },
     {
         yearGrowth: 1.5,
@@ -282,6 +352,117 @@ const dataObjects = [
         femaleGrowth: 2.7,
         //2014 Alaska
     },
+    {
+        yearGrowth: 2.3,
+        maleGrowth: 1.5,
+        curePercentage: 0,
+        femaleGrowth: 2.9,
+        //2018 Florida
+    },
+    {
+        yearGrowth: 1,
+        maleGrowth: 1.3,
+        curePercentage: 0,
+        femaleGrowth: 0.7,
+        //2017 
+    },
+    {
+        yearGrowth: 0.6,
+        maleGrowth: 0.6,
+        curePercentage: 0,
+        femaleGrowth: 0.7,
+        //2016 
+    },
+    {
+        yearGrowth: 0.6,
+        maleGrowth: 1.9,
+        curePercentage: 0,
+        femaleGrowth: -0.7,
+        //2015 
+    },
+    {
+        yearGrowth: -0.2,
+        maleGrowth: -1.7,
+        curePercentage: 0.2,
+        femaleGrowth: 1.3,
+        //2014 Florida
+    },
+    
+    
+    
+
+    
+    {
+        yearGrowth: 0.7,
+        maleGrowth: 0,
+        curePercentage: 0,
+        femaleGrowth: 1.4,
+        //2018 Michigan
+    },
+    {
+        yearGrowth: -0.2,
+        maleGrowth: -1,
+        curePercentage: 0.2,
+        femaleGrowth: 0.6,
+        //2017
+    },
+    {
+        yearGrowth: 1.3,
+        maleGrowth: 0.7,
+        curePercentage: 0,
+        femaleGrowth: 2,
+        //2016
+    },
+    {
+        yearGrowth: 0.5,
+        maleGrowth: 0.8,
+        curePercentage: 0,
+        femaleGrowth: 0,
+        //2015
+    },
+    {
+        yearGrowth: -0.8,
+        maleGrowth: -0.2,
+        curePercentage: 0.8,
+        femaleGrowth: -1.3,
+        //2014 Michigan
+    },
+    {
+        yearGrowth: 2.1,
+        maleGrowth: -0.2,
+        curePercentage: 0.7,
+        femaleGrowth: 2,
+        //2018 Arkansas
+    },
+    {
+        yearGrowth: 1.5,
+        maleGrowth: -0.7,
+        curePercentage: 0,
+        femaleGrowth: -2,
+        //2017
+    },
+    {
+        yearGrowth: 1.2,
+        maleGrowth: -3,
+        curePercentage: 0,
+        femaleGrowth: 5.5,
+        //2016
+    },
+    {
+        yearGrowth: -1.4,
+        maleGrowth: -0.7,
+        curePercentage: 0,
+        femaleGrowth: -2.1,
+        //2015
+    },
+    {
+        yearGrowth: 1.3,
+        maleGrowth: 0.6,
+        curePercentage: 0,
+        femaleGrowth: 1.9,
+        //2014 Arkansas
+    },
+
 
 
 
