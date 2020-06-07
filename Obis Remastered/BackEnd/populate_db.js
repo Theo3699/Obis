@@ -1,121 +1,43 @@
 var mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/obis", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
-    console.log("connected successfully to database");
+  console.log("connected successfully to database");
 });
 
 var countrySchema = new mongoose.Schema({
-    name: String,
-    year: Number,
+  name: String,
+  year: Number,
 }).index(
-    {
-        name: 1,
-        year: 1,
-    },
-    {
-        unique: true,
-    }
+  {
+    name: 1,
+    year: 1,
+  },
+  {
+    unique: true,
+  }
 );
 var Country = mongoose.model("Country", countrySchema);
 
 var dataSchema = new mongoose.Schema({
-    yearGrowth: Number,
-    maleGrowth: Number,
-    femaleGrowth: Number,
-    curePercentage: Number,
-    _id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Country",
-    },
+  yearGrowth: Number,
+  maleGrowth: Number,
+  femaleGrowth: Number,
+  curePercentage: Number,
+  _id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Country",
+  },
 });
 var Data = mongoose.model("Data", dataSchema);
 
 
-/*function createCountry(countryObj) {
-    return new Promise((resolve) => {
-      if (!isValidCountry(countryObj)) {
-        resolve("error");
-      } else {
-        const newCountry = new Country(countryObj);
-        newCountry
-          .save()
-          .then((doc) => {//we get acces to the document that we just saved in our DB
-            resolve(doc);
-          })
-          .catch((err) => {
-            resolve(err);
-          });
-      }
-    });
-  }
-  
-  function createData(data) {
-    return new Promise((resolve) => {
-      if (!isValidData(data)) {
-        resolve("error");//datele date nu sunt valide
-      } else {
-        const newData = new Data({
-          yearGrowth: data.yearGrowth,
-          maleGrowth: data.maleGrowth,
-          curePercentage: data.curePercentage,
-          femaleGrowth: data.femaleGrowth,
-          _id: data.id,
-        });
-        newData
-          .save()
-          .then((doc) => {
-            resolve(doc);//the response
-          })
-          .catch((err) => {//any error that shows up
-            resolve(err.message);
-          });
-      }
-    });
-  }
-  */
-  function getCountries() {
-    return Country.find();//return all coutries from database
-  }
-  
-  function isValidCountry(country) {
-    if (country.name === undefined) {
-      return false;//test name
-    }
-    if (country.year === undefined) {
-      return false;//test year
-    }
-  
-    return true;
-  }
-  
-  
-  function isValidData(data) {
-    console.log(data);
-  
-    if (data.yearGrowth === undefined) {
-      return false;
-    }
-  
-    if (data.maleGrowth === undefined) {
-      return false;
-    }
-  
-    if (data.femaleGrowth === undefined) {
-      return false;
-    }
-  
-    if (data.curePercentage === undefined) {
-      return false;
-    }
-    return true;
-  }
 
 
 
@@ -261,24 +183,24 @@ const countryObjects = [
   {
     name: "Colorado",
     year: 2018,
-},
-{
+  },
+  {
     name: "Colorado",
     year: 2017,
-},
-{
+  },
+  {
     name: "Colorado",
     year: 2016,
-},
-{
+  },
+  {
     name: "Colorado",
     year: 2015,
-},
-{
+  },
+  {
     name: "Colorado",
     year: 2014,
-},
-    
+  },
+
 ];
 
 const dataObjects = [
@@ -511,35 +433,35 @@ const dataObjects = [
     curePercentage: 0,
     femaleGrowth: 0.4,
     //2018 Colorado
-},
-{
+  },
+  {
     yearGrowth: 0.7,
     maleGrowth: -0.9,
     curePercentage: 0,
     femaleGrowth: 1.6,
     //2017 Colorado
-},
-{
+  },
+  {
     yearGrowth: 4.2,
     maleGrowth: 2.2,
     curePercentage: 0,
     femaleGrowth: 2.0,
     //2016 Colorado
-},
-{
-    yearGrowth:-2.2,
-    maleGrowth: 0-1.7,
+  },
+  {
+    yearGrowth: -2.2,
+    maleGrowth: 0 - 1.7,
     curePercentage: 2.2,
     femaleGrowth: -0.5,
     //2015 Colorado
-},
-{
+  },
+  {
     yearGrowth: 0,
     maleGrowth: 1.1,
     curePercentage: 0,
     femaleGrowth: -1.1,
     //2014 Colorado
-},
+  },
 
 
 ];
