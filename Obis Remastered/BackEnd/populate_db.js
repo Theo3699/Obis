@@ -164,6 +164,51 @@ const countryObjects = [
         name: "alaska",
         year: 2014,
     },
+
+
+    {
+      name: "California",
+      year: 2018,
+  },
+  {
+      name: "California",
+      year: 2017,
+  },
+  {
+      name: "California",
+      year: 2016,
+  },
+  {
+      name: "California",
+      year: 2015,
+  },
+  {
+      name: "California",
+      year: 2014,
+  },
+
+
+  {
+    name: "Colorado",
+    year: 2018,
+},
+{
+    name: "Colorado",
+    year: 2017,
+},
+{
+    name: "Colorado",
+    year: 2016,
+},
+{
+    name: "Colorado",
+    year: 2015,
+},
+{
+    name: "Colorado",
+    year: 2014,
+},
+    
 ];
 
 const dataObjects = [
@@ -237,6 +282,47 @@ const dataObjects = [
         femaleGrowth: 2.7,
         //2014 Alaska
     },
+
+
+
+
+    {
+      yearGrowth: 1.3,
+      maleGrowth: 1.5,
+      curePercentage: -1.3,
+      femaleGrowth: -0.2,
+      //2018 California
+  },
+  {
+      yearGrowth:0.2,
+      maleGrowth: -0.4,
+      curePercentage: -0.2,
+      femaleGrowth: 0.6,
+      //2017 California
+  },
+  {
+      yearGrowth: 1.9,
+      maleGrowth: 0.3,
+      curePercentage: -1.9,
+      femaleGrowth: 1.5,
+      //2016 California
+  },
+  {
+      yearGrowth:-1.2,
+      maleGrowth: 0.6,
+      curePercentage: 1.2,
+      femaleGrowth: -1.7,
+      //2015 California
+  },
+  {
+      yearGrowth: 1.2,
+      maleGrowth: -1.1,
+      curePercentage: -1.2,
+      femaleGrowth: 2.3,
+      //2014 California
+  },
+
+
 ];
 
 countryObjects.forEach((country, index) => {
