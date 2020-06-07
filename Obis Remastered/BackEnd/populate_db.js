@@ -49,7 +49,7 @@ var Data = mongoose.model("Data", dataSchema);
           .then((doc) => {//we get acces to the document that we just saved in our DB
             resolve(doc);
           })
-          .catch((err) => {//daca este vreo eroare in salvarea in baza de date, o "prindem"
+          .catch((err) => {
             resolve(err);
           });
       }
@@ -81,15 +81,15 @@ var Data = mongoose.model("Data", dataSchema);
   }
   */
   function getCountries() {
-    return Country.find();//returnam toate tarile din baza de date
+    return Country.find();//return all coutries from database
   }
   
   function isValidCountry(country) {
     if (country.name === undefined) {
-      return false;//testam numele
+      return false;//test name
     }
     if (country.year === undefined) {
-      return false;//testam anul
+      return false;//test year
     }
   
     return true;
@@ -250,35 +250,35 @@ const dataObjects = [
     {
         yearGrowth: -4.7,
         maleGrowth: -2.2,
-        curePercentage: 1432,
+        curePercentage: 4.7,
         femaleGrowth: -7.6,
         //2018 Alaska
     },
     {
         yearGrowth: 2.8,
         maleGrowth: 0.3,
-        curePercentage: 1,
+        curePercentage: 0,
         femaleGrowth: 5.8,
         //2017 Alaska
     },
     {
         yearGrowth: 1.6,
         maleGrowth: 3,
-        curePercentage: 10,
+        curePercentage: 0,
         femaleGrowth: -0.2,
         //2016 Alaska
     },
     {
         yearGrowth: 0.1,
         maleGrowth: 0,
-        curePercentage: 188,
+        curePercentage: 0,
         femaleGrowth: 0.3,
         //2015 Alaska
     },
     {
         yearGrowth: 1.3,
         maleGrowth: 0.1,
-        curePercentage: 123,
+        curePercentage: 0,
         femaleGrowth: 2.7,
         //2014 Alaska
     },
