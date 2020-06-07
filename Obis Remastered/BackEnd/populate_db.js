@@ -47,63 +47,63 @@ var Data = mongoose.model("Data", dataSchema);
 
 const countryObjects = [
     {
-        name: "alabama",
+        name: "Alabama",
         year: 2018,
     },
     {
-        name: "alabama",
+        name: "Alabama",
         year: 2017,
     },
     {
-        name: "alabama",
+        name: "Alabama",
         year: 2016,
     },
     {
-        name: "alabama",
+        name: "Alabama",
         year: 2015,
     },
     {
-        name: "alabama",
+        name: "Alabama",
         year: 2014,
     },
     {
-        name: "alaska",
+        name: "Alaska",
         year: 2018,
     },
     {
-        name: "alaska",
+        name: "Alaska",
         year: 2017,
     },
     {
-        name: "alaska",
+        name: "Alaska",
         year: 2016,
     },
     {
-        name: "alaska",
+        name: "Alaska",
         year: 2015,
     },
     {
-        name: "alaska",
+        name: "Alaska",
         year: 2014,
     },
     {
-        name: "florida",
+        name: "Florida",
         year: 2018,
     },
     {
-        name: "florida",
+        name: "Florida",
         year: 2017,
     },
     {
-        name: "florida",
+        name: "Florida",
         year: 2016,
     },
     {
-        name: "florida",
+        name: "Florida",
         year: 2015,
     },
     {
-        name: "florida",
+        name: "Florida",
         year: 2014,
     },
 
@@ -113,43 +113,43 @@ const countryObjects = [
 
     
     {
-        name: "michigan",
+        name: "Michigan",
         year: 2018,
     },
     {
-        name: "michigan",
+        name: "Michigan",
         year: 2017,
     },
     {
-        name: "michigan",
+        name: "Michigan",
         year: 2016,
     },
     {
-        name: "michigan",
+        name: "Michigan",
         year: 2015,
     },
     {
-        name: "michigan",
+        name: "Michigan",
         year: 2014,
     },
     {
-        name: "arkansas",
+        name: "Arkansas",
         year: 2018,
     },
     {
-        name: "arkansas",
+        name: "Arkansas",
         year: 2017,
     },
     {
-        name: "arkansas",
+        name: "Arkansas",
         year: 2016,
     },
     {
-        name: "arkansas",
+        name: "Arkansas",
         year: 2015,
     },
     {
-        name: "arkansas",
+        name: "Arkansas",
         year: 2014,
     },
 
