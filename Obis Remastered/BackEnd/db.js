@@ -29,7 +29,7 @@ var dataSchema = new mongoose.Schema({
   maleGrowth: Number,
   femaleGrowth: Number,
   curePercentage: Number,
-  _id: {//Mongoose creates a new _id of type ObjectId to your document.
+  _id: {//legatura cu cealalta schema
     type: mongoose.Schema.Types.ObjectId,//un obiect cu subcategoriile de nume si an
     ref: "Country",
   },
@@ -93,7 +93,7 @@ function isValidCountry(country) {
 
   return true;
 }
-
+ 
 
 function isValidData(data) {
   console.log(data);
@@ -115,6 +115,33 @@ function isValidData(data) {
   }
   return true;
 }
+
+function getData({ country }) {
+  let result = [];
+  return new Promise((resolve) => {
+    const filter = country
+      ? {
+          name: country,
+        }
+      : null;
+    Country.find(filter).then((countries) => {
+      Data.find().then((countriesData) => {
+        countries.forEach((country) => {
+          obj = countriesData.find((o) => o.id === country.id);
+          if (obj === undefined) {
+            result.push(addPartialProps(country));
+          } else {
+            result.push(addAllProps(country, obj));
+          }
+        });
+        resolve(result);
+      });
+    });
+  });
+}
+
+
+
 
 //functionality
 
