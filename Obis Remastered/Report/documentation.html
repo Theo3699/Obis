@@ -1,299 +1,333 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title> Obesity Prevalence Visualizer - Scholarly HTML</title>
-  </head>
-  <body prefix="schema: http://schema.org">
-      <h1> Obesity Prevalence Visualizer - Raport Scholarly</h1>
+</head>
 
-      <div id="container">
-        	<ul>
-              <li><a href="#Introducere">2. Introducere</a></li>
-            	<li><a href = "#arhitectura"> 4.Arhitectura proiectului</a>
-              <ul>
-                    	<li><a href = "#diagrama"> 4.1.Diagramă </a></li>
-                        <li><a href = "#context"> 4.2.Context </a></li>
-                        <li><a href = "#diagrama bd"> 4.3.Diagramă bază de date </a></li>
-                	</ul>
-            	</li>
-              <li><a href="#MVC">6. MVC Model</a></li>
-              <li><a href="#UseCase">7. Scenarii de utilizare</a></li>
-              <li><a href="#Contributii">8. Contribuții</a></li>
-        	    </ul>
-              
-    	</div>
+<body prefix="schema: http://schema.org">
+    <h1> Obesity Prevalence Visualizer - Raport Scholarly</h1>
+
+    <div id="container">
+        <ul>
+            <li><a href="#abs">1.Despre aplicație </a></li>
+            <li><a href="#Introducere">2. Introducere</a></li>
+            <li><a href="#tech">3.Tehnologii folosite</a>
+                <ul>
+                    <li><a href="#t1">3.1.Front-end:</a></li>
+                    <ul> HTML </ul>
+                    <ul> CSS </ul>
+                    <ul> JAVASCRIPT </ul>
+                    <li><a href="#t2">3.2.Backend: </a></li>
+                    <ul> NodeJs </ul>
+                    <ul> MongoDB </ul>
+                    <ul> GitHub </ul>
+                    <ul> Compass </ul>
+                </ul>
+            </li>
+            <li><a href="#arhitectura"> 4.Arhitectura proiectului</a>
+                <ul>
+                    <li><a href="#diagrama"> 4.1.Diagramă </a></li>
+                    <li><a href="#context"> 4.2.Context </a></li>
+                    <li><a href="#diagrama_bd"> 4.3.Diagramă bază de date </a></li>
+                </ul>
+            </li>
+            <li> <a href="#src">5.Funcționalitate </a></li>
+            <li><a href="#MVC">6. MVC Model</a></li>
+            <li><a href="#UseCase">7. Scenarii de utilizare</a></li>
+        </ul>
+
+
+
+
+
+    </div>
+    <section id="abs">
+        <h2>
+            1.Despre aplicație
+        </h2>
+        <p>
+            Aplicația dezvoltată este una de vizualizare a datelor referitoate la obezitatea populației. API-ul este
+            dezvoltat pe baza datelor din cadrul
+            <a href="https://www.cdc.gov/brfss/annual_data/annual_data.htm"> <em> BRFSS </em></a>.
+            În aplicație vor putea fi vizualizate datele generate de la comparațiile dintre state cu ajutorul unui tabel
+            și a două grafice. De asemenea, datele vor putea fi exportate într-un format csv.
+
+        </p>
+    </section>
+
+
     <section id="Introducere">
 
-    <h2>
-        2. Introducere
-    </h2>
-    <p>
-      Nu de multe ori avem acces la o modalitate de vizualizare a datelor într-un format prietenos cu orice tip de utilizator (nefamiliarizat cu baze de date în formate de tip csv,sql, etc). 
-   </p>
-      <p>
-        Identificând această nevoie, putem soluționa necesitatea prin construirea unei aplicații de vizualizare a datelor. Obesity Prevalence Visualiser reprezintă o aplicație Web care permite oricărei persoane să vizualizeze datele legate de obezitate în mai multe formate: tabel și grafic, având posibilitatea de a elimina criterii de comparație, evidențiind numai o anumită parte a bazei de date(cea dorită de utilizator).
-      </p>
-      <p>
-        Aplicația va furniza informații despre obezitatea din anumite țări, pe care user-ul le poate alege. Informațiile sunt prezentate în 3 pagini diferite: a) prima conține un tabel în care utilizatorul poate vedea datele brute, având și posibilitatea de export; b) a două conține un grafic(liniar) pentru ficare țară cu posibilitatea de selectare a criteriilor afișării; c) ultima conține un alt grafic de tip barplot ce compară două țări în funcție de un anumit indice  selectat. 
-    </p>
+        <h2>
+            2.Introducere
+        </h2>
+        <p>
+            Nu de multe ori avem acces la o modalitate de vizualizare a datelor într-un format prietenos cu orice tip de
+            utilizator (nefamiliarizat cu baze de date în formate de tip csv,sql, etc).
+        </p>
+        <p>
+            Identificând această nevoie, putem soluționa necesitatea prin construirea unei aplicații de vizualizare a
+            datelor. Obesity Prevalence Visualiser reprezintă o aplicație Web care permite oricărei persoane să
+            vizualizeze datele legate de obezitate în mai multe formate: tabel și grafic, având posibilitatea de a
+            elimina criterii de comparație, evidențiind numai o anumită parte a bazei de date(cea dorită de utilizator).
+        </p>
+        <p>
+            Aplicația va furniza informații despre obezitatea din anumite țări, pe care user-ul le poate alege.
+            Informațiile sunt prezentate în 3 pagini diferite: a) prima conține un tabel în care utilizatorul poate
+            vedea datele brute, având și posibilitatea de export; b) a două conține un grafic(liniar) pentru ficare țară
+            cu posibilitatea de selectare a criteriilor afișării; c) ultima conține un alt grafic de tip barplot ce
+            compară două țări în funcție de un anumit indice selectat.
+        </p>
+    </section>
+
+    <section id="tech">
+        <h2>
+            Tehnologii folosite
+        </h2>
+        <h3 id="t1">
+            3.1 Front-end:
+
+        </h3>
+        <p>
+            Tehnologiile Html,Css,Javascript sunt folosite pentru implementarea interfeței aplicației și de a genera
+            graficele.
+        </p>
+        <h3 id="t2">
+            3.2 Backend:
+
+        </h3>
+        <p>
+            Principala tehnologie aleasă este NodeJS, o tehnologie "open-source server environment", ce
+            folosește JavaScript pe partea de server. Pentru administrarea datelor am folosit MongoDB(datele pot fi
+            vizualizate și in Compass).
+            GitHub-ul a fost folosit pentru dezvoltarea aplicației rapid si eficient.
+
+        </p>
+
     </section>
 
 
     <section id="arhitectura">
         <h2>
-            <span>4. </span>
-             Arhitectura proiectului
+            4.Arhitectura proiectului
         </h2>
         <h3 id="diagrama">
-            <span>4.1 </span>
-            Diagramă
-        </h3>
-      	<p>
-       		<img src="./images/big_diagram.png" alt="Diagrama">
-      	</p>
-
-        <h3 id="context">
-            <span>4.2 </span>
-            Context
+            4.1.Diagramă
         </h3>
         <p>
-            Accesarea aplicației Obis va direcționa utilizatorul către pagina principală. Aceasta conține un design simplu și intuitiv, ce-i va permite utilizatorului să acceseze imediat atât un scurt rezumat al problemelor legate de obezitate, cât și motivele ce duc la aceasta. Utilizatorului îi sunt expuse următoarele posibilități : 
+            <img src="./images/big_diagram.png" alt="Diagrama">
+        </p>
+
+        <h3 id="context">
+            4.2.Context
+        </h3>
+        <p>
+            Accesarea aplicației Obis va direcționa utilizatorul către pagina principală. Aceasta conține un design
+            simplu și intuitiv, ce-i va permite utilizatorului să acceseze imediat atât un scurt rezumat al problemelor
+            legate de obezitate, cât și motivele ce duc la aceasta. Utilizatorului îi sunt expuse următoarele
+            posibilități :
         </p>
         <ol type="I">
             <li>
-            	Utilizatorul poate accesa rezumatul.
+                Utilizatorul poate accesa rezumatul.
             </li>
 
             <li>
                 Utilizatorul poate accesa unul dintre cele 3 tab-uri ale site-ului :
-            
-            <ol type="a">
-                <li>
-                    Data Visualization : aici are posibilitatea de a  
-                
-                <ul style="list-style-type:disc;">
+
+                <ol type="a">
                     <li>
-                        vizualiza datele existente în baza de date și de a urmări manual evoluția de la an la an a statelor.
+                        Data Visualization : aici are posibilitatea de a
+
+                        <ul style="list-style-type:disc;">
+                            <li>
+                                vizualiza datele existente în baza de date și de a urmări manual evoluția de la an la an
+                                a statelor.
+                            </li>
+                            <li>
+                                de a exporta într-un fișier în format csv datele din tabelul vizualizat anterior.
+                            </li>
+                        </ul>
+                    <li>
+                        Compare Data : aici utilizatorul aplicației poate selecta din baza de date oricare 2 state
+                        disponibile și să facă o comparație între cele două, alegând un criteriu din cele deja
+                        existente. În urmă selecției, un grafic va fi afișat și pe baza graficului, acesta observă
+                        diferența dintre cele două state pentru categoria aleasă anterior.
                     </li>
                     <li>
-                        de a exporta într-un fișier în format csv datele din tabelul vizualizat anterior.
+                        Statistics : utilizatorul poate observa evoluția statelor aflate în baza de date de-a lungul
+                        anilor pe baza criteriilor deja existente. Utilizatorul trebuie să selecteze un stat din cele
+                        disponibile, iar aplicația va afișa cele menționate anterior.
                     </li>
-                </ul>
-                <li>
-                    Compare Data : aici utilizatorul aplicației poate selecta din baza de date oricare 2 state disponibile și să facă o comparație între cele două, alegând un criteriu din cele deja existente. În urmă selecției, un grafic va fi afișat și pe baza graficului, acesta observă diferența dintre cele două state pentru categoria aleasă anterior.
-                </li>
-                <li>
-                    Statistics : utilizatorul poate observa evoluția statelor aflate în baza de date de-a lungul anilor pe baza criteriilor deja existente. Utilizatorul trebuie să selecteze un stat din cele disponibile, iar aplicația va afișa cele menționate anterior.
-                </li>
-            </ol>
-          	</li>
+                </ol>
+            </li>
         </ol>
 
-        <h3 id="diagrama bd">
-          <span>4.3 </span>
-          Diagramă bază de date
+        <h3 id="diagrama_bd">
+            4.3.Diagramă bază de date
         </h3>
-          <p>
-            <img src="./images/Diagrama baza de date.png" alt="Diagrama BD">
-          </p>
-      </section>
+        <p>
+            <img src="./images/Diagrama_baza_de_date.png" alt="Diagrama_BD">
+        </p>
+    </section>
 
+    <section id="src">
+        <h2>
+            5.Funcționalitate
+        </h2>
+        <p>
+            Utilizatorul va face cereri de tip get pentru preluarea datelor pentru a le compara si de a le vizualiza.
 
-      <section id="MVC">
-
-  <h2>
-      6. Model-View-Controller (MVC)
-  </h2>
-  <img id="mvc-img" src="./images/mvc.jpg" alt="Diagrama MVC">
-  <ul style="list-style-type:none;">
-      <li>
-          Controllers - capteaza si proceseaza actiunile utilizatorilor.
-          <ul style="list-style-type:decimal;">
-            <li>
-                Handler.js
-            </li>
-            
-          </ul>
-      </li>
-      <li>
-          Models - responsabile de manipularea operațiunilor logice și de utilizare de informație pentru a rezulta de o formă ușor de înțeles.
-          <ul style="list-style-type:decimal;">
-            <li>
-                server.js
-            </li>
-            <li>
-                db.js
-            </li>
-          </ul>
-      </li>
-      <li>
-          View - prezentarea datelor catre utilizator, de obicei in forma unei interfete grafice. Pot exista mai multe view-uri asociate cu un acelasi model.
-          <ul style="list-style-type:decimal;">
-            <li>
-                index.html
-            </li> 
-            <li>
-                homepage.html
-            </li>
-            <li>
-                tabel.html
-            </li>
-            <li>
-                charts.html
-            </li>
-            <li>
-                statistics.html
-            </li>
-            <li>
-                info.html
-            </li>
-          </ul>
-      </li>
-    </ul>   
-  </section>
-  <section id="UseCase">
-
-  <h2>
-      7. Scenarii de utilizare
-  </h2>
-  
-    <h3>
-      7.1 User person
-    </h3>
-
-      <ul style="list-style-type:disc;">
-        <li>
-            utilizatori: este reprezentat de orice utilizator normal
-        </li>
-        <li>
-            administrator : este reprezentat de persoanele ce dau update la baza de date
-        </li>
-      </ul>
-    <h3>
-      7.2 User stories
-    </h3>
-
-    <ol type="I">
-        <li>
-            utilizator:
-            <ul style="list-style-type:disc;">
-              <li>
-                  poate accesa sit-ul pentru mai multe metode de vizualizare a anumitor date privind obezitatea in lume.
-              </li>
-              <li>
-                  poate selecta criterii in functie de care se va face vizualizarea datelor.
-              </li>
-              <li>
-                  poate compara doua tari la alegere din baza de date.
-              </li>
-            </ul>
-        </li>
-        <li>
-            administrator:
-            <ul style="list-style-type:disc;">
-            <li>
-                are acces la baza de date.
-            </li>
-            <li>
-                populeaza initial baza de date.
-            </li>
-            <li>
-                updatează datele sau adauga elemente în baza de date.
-            </li>
-            </ul>
-        </li>
-    </ol>
-    <ol type="1">
-      <li>
-        Scenariu:
-        <ul style="list-style-type:disc;">
-          <li>
-              un utilizator dorește să vizioneze datele
-          </li>
-        </ul>
-        Descriere:
-        <ul style="list-style-type:disc;">
-          <li>
-              Acesta accesează site-ul. Nefiind nevoie de autentificare, acesta poate vedea o descriere a site-ului fiind direcționat către o pagină de info prin accesarea butonului See More. 
-          </li>
-          <li>
-              După care are posibilitate de a alege o metodă de vizualizare/comparare.
-              Din butonul Data Vizualization este direcționat către un tabel cu datele brute, acesta putând mai apoi să le și downloadeze.
-          </li>
-          <li>
-              Din butonul Compare Data poate realiza o comparare a două țări în funcție de criteriile alese de el
-          </li>
-          <li>
-              Din butonul Statistics poate vizualiza un grafic cu evoluția obezității într-o țară selectată de el
-          </li>
-        </ul>
-      </li>
-
-  
-    </ol>
-  
-  
-</section>
-
-<section id="Contributii">
-
-      <h2>
-          8. Delegare de task-uri
-      </h2>
-
-      <ul style="list-style-type:none;">
-      <li>
-        Mihaila Emilian
-        <ul style="list-style-type:disc;">
-            <li>
-                Crearea schemelor bazei de date
-            </li>
-            <li>
-                Crearea funcțiilor: Create_data, Get_Data, Create_Country, Get_Country si validarile datelor
-
-                O parte din handler pentru funcțiile prezentate mai sus
-            </li>
-            <li>
-                Pagina cu tabelul și legarea paginilor prin index
-            </li>
-          </ul>
-      </li>
-      <li>
-          Samson Theodor
-          <ul style="list-style-type:disc;">
-          <li>
-              Creearea server-ului
-          </li>
-          <li>
-              Pagini Web: Info și Home
-          </li>
-          <li>
-              Exportul in csv
-          </li>
-          <li>
-              Adaugare in baza de date
-          </li>
-        </ul>
-        </li>
-        <li>
-          Stoleriu Mihail Iulian
-      <ul style="list-style-type:disc;">
-              <li>
-                  Functia compare si tot ce ține de aceasta
-              </li>
-              <li>
-                  Pagini html: Charts și Compare Data
-              </li>
-              <li>
-                  Adaugare in baza de date
-              </li>
-            </ul>
-            </li>                    
-      </ul>  
+        </p>
     </section>
 
 
+    <section id="MVC">
+
+        <h2>
+            6.Model-View-Controller (MVC)
+        </h2>
+        <img id="mvc-img" src="./images/mvc.jpg" alt="Diagrama MVC">
+        <ul style="list-style-type:none;">
+            <li>
+                Controllers - capteaza si proceseaza actiunile utilizatorilor.
+                <ul style="list-style-type:decimal;">
+                    <li>
+                        Handler.js
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                Models - responsabile de manipularea operațiunilor logice și de utilizare de informație pentru a rezulta
+                de o formă ușor de înțeles.
+                <ul style="list-style-type:decimal;">
+                    <li>
+                        server.js
+                    </li>
+                    <li>
+                        db.js
+                    </li>
+                </ul>
+            </li>
+            <li>
+                View - prezentarea datelor catre utilizator, de obicei in forma unei interfete grafice. Pot exista mai
+                multe view-uri asociate cu un acelasi model.
+                <ul style="list-style-type:decimal;">
+                    <li>
+                        index.html
+                    </li>
+                    <li>
+                        homepage.html
+                    </li>
+                    <li>
+                        tabel.html
+                    </li>
+                    <li>
+                        charts.html
+                    </li>
+                    <li>
+                        statistics.html
+                    </li>
+                    <li>
+                        info.html
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section id="UseCase">
+
+        <h2>
+            7.Scenarii de utilizare
+        </h2>
+
+        <h3>
+            <span>7.1 </span>
+            User person
+        </h3>
+
+        <ul style="list-style-type:disc;">
+            <li>
+                utilizatori: este reprezentat de orice utilizator normal
+            </li>
+            <li>
+                administrator : este reprezentat de persoanele ce dau update la baza de date
+            </li>
+        </ul>
+        <h3>
+            7.2.User stories
+        </h3>
+
+        <ol type="I">
+            <li>
+                utilizator:
+                <ul style="list-style-type:disc;">
+                    <li>
+                        poate accesa sit-ul pentru mai multe metode de vizualizare a anumitor date privind obezitatea in
+                        lume.
+                    </li>
+                    <li>
+                        poate selecta criterii in functie de care se va face vizualizarea datelor.
+                    </li>
+                    <li>
+                        poate compara doua tari la alegere din baza de date.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                administrator:
+                <ul style="list-style-type:disc;">
+                    <li>
+                        are acces la baza de date.
+                    </li>
+                    <li>
+                        populeaza initial baza de date.
+                    </li>
+                    <li>
+                        updatează datele sau adauga elemente în baza de date.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <ol type="1">
+            <li>
+                Scenariu:
+                <ul style="list-style-type:disc;">
+                    <li>
+                        un utilizator dorește să vizioneze datele
+                    </li>
+                </ul>
+                Descriere:
+                <ul style="list-style-type:disc;">
+                    <li>
+                        Acesta accesează site-ul. Nefiind nevoie de autentificare, acesta poate vedea o descriere a
+                        site-ului fiind direcționat către o pagină de info prin accesarea butonului See More.
+                    </li>
+                    <li>
+                        După care are posibilitate de a alege o metodă de vizualizare/comparare.
+                        Din butonul Data Vizualization este direcționat către un tabel cu datele brute, acesta putând
+                        mai apoi să le și downloadeze.
+                    </li>
+                    <li>
+                        Din butonul Compare Data poate realiza o comparare a două țări în funcție de criteriile alese de
+                        el
+                    </li>
+                    <li>
+                        Din butonul Statistics poate vizualiza un grafic cu evoluția obezității într-o țară selectată de
+                        el
+                    </li>
+                </ul>
+            </li>
+
+
+        </ol>
+
+
+    </section>
 </body>
+
 </html>
