@@ -10,17 +10,35 @@
 
       <div id="container">
         	<ul>
-
+              <li><a href="#Introducere">2. Introducere</a></li>
             	<li><a href = "#arhitectura"> 4.Arhitectura proiectului</a>
-                	<ul>
+              <ul>
                     	<li><a href = "#diagrama"> 4.1.Diagramă </a></li>
                         <li><a href = "#context"> 4.2.Context </a></li>
                         <li><a href = "#diagrama bd"> 4.3.Diagramă bază de date </a></li>
                 	</ul>
             	</li>
-        	</ul>
+              <li><a href="#MVC">6. MVC Model</a></li>
+              <li><a href="#UseCase">7. Scenarii de utilizare</a></li>
+        	    </ul>
+              
     	</div>
+    <section id="Introducere">
 
+    <h2>
+        <span>2.</span>
+         Introducere
+    </h2>
+    <p>
+      Nu de multe ori avem acces la o modalitate de vizualizare a datelor într-un format prietenos cu orice tip de utilizator (nefamiliarizat cu baze de date în formate de tip csv,sql, etc). 
+   </p>
+      <p>
+        Identificând această nevoie, putem soluționa necesitatea prin construirea unei aplicații de vizualizare a datelor. Obesity Prevalence Visualiser reprezintă o aplicație Web care permite oricărei persoane să vizualizeze datele legate de obezitate în mai multe formate: tabel și grafic, având posibilitatea de a elimina criterii de comparație, evidențiind numai o anumită parte a bazei de date(cea dorită de utilizator).
+      </p>
+      <p>
+        Aplicația va furniza informații despre obezitatea din anumite țări, pe care user-ul le poate alege. Informațiile sunt prezentate în 3 pagini diferite: a) prima conține un tabel în care utilizatorul poate vedea datele brute, având și posibilitatea de export; b) a două conține un grafic(liniar) pentru ficare țară cu posibilitatea de selectare a criteriilor afișării; c) ultima conține un alt grafic de tip barplot ce compară două țări în funcție de un anumit indice  selectat. 
+    </p>
+    </section>
 
 
     <section id="arhitectura">
@@ -82,3 +100,145 @@
           </p>
       </section>
 
+
+      <section id="MVC">
+
+  <h2>
+      <span>6. </span>
+      Model-View-Controller (MVC)
+  </h2>
+  <img id="mvc-img" src="./images/mvc.jpg" alt="Diagrama MVC">
+  <ul style="list-style-type:none;">
+      <li>
+          Controllers - capteaza si proceseaza actiunile utilizatorilor.
+          <ul style="list-style-type:decimal;">
+            <li>
+                Handler.js
+            </li>
+            
+          </ul>
+      </li>
+      <li>
+          Models - responsabile de manipularea operațiunilor logice și de utilizare de informație pentru a rezulta de o formă ușor de înțeles.
+          <ul style="list-style-type:decimal;">
+            <li>
+                server.js
+            </li>
+            <li>
+                db.js
+            </li>
+          </ul>
+      </li>
+      <li>
+          View - prezentarea datelor catre utilizator, de obicei in forma unei interfete grafice. Pot exista mai multe view-uri asociate cu un acelasi model.
+          <ul style="list-style-type:decimal;">
+            <li>
+                index.html
+            </li> 
+            <li>
+                homepage.html
+            </li>
+            <li>
+                tabel.html
+            </li>
+            <li>
+                charts.html
+            </li>
+            <li>
+                statistics.html
+            </li>
+            <li>
+                info.html
+            </li>
+          </ul>
+      </li>
+    </ul>   
+  </section>
+  <section id="UseCase">
+
+  <h2>
+      <span>7. </span>
+      Scenarii de utilizare
+  </h2>
+  
+    <h3>
+      <span>7.1 </span>
+      User person
+    </h3>
+
+      <ul style="list-style-type:disc;">
+        <li>
+            utilizatori: este reprezentat de orice utilizator normal
+        </li>
+        <li>
+            administrator : este reprezentat de persoanele ce dau update la baza de date
+        </li>
+      </ul>
+    <h3>
+      <span>7.2 </span>
+      User stories
+    </h3>
+
+    <ol type="I">
+        <li>
+            utilizator:
+            <ul style="list-style-type:disc;">
+              <li>
+                  poate accesa sit-ul pentru mai multe metode de vizualizare a anumitor date privind obezitatea in lume.
+              </li>
+              <li>
+                  poate selecta criterii in functie de care se va face vizualizarea datelor.
+              </li>
+              <li>
+                  poate compara doua tari la alegere din baza de date.
+              </li>
+            </ul>
+        </li>
+        <li>
+            administrator:
+            <ul style="list-style-type:disc;">
+            <li>
+                are acces la baza de date.
+            </li>
+            <li>
+                populeaza initial baza de date.
+            </li>
+            <li>
+                updatează datele sau adauga elemente în baza de date.
+            </li>
+            </ul>
+        </li>
+    </ol>
+    <ol type="1">
+      <li>
+        Scenariu:
+        <ul style="list-style-type:disc;">
+          <li>
+              un utilizator dorește să vizioneze datele
+          </li>
+        </ul>
+        Descriere:
+        <ul style="list-style-type:disc;">
+          <li>
+              Acesta accesează site-ul. Nefiind nevoie de autentificare, acesta poate vedea o descriere a site-ului fiind direcționat către o pagină de info prin accesarea butonului See More. 
+          </li>
+          <li>
+              După care are posibilitate de a alege o metodă de vizualizare/comparare.
+              Din butonul Data Vizualization este direcționat către un tabel cu datele brute, acesta putând mai apoi să le și downloadeze.
+          </li>
+          <li>
+              Din butonul Compare Data poate realiza o comparare a două țări în funcție de criteriile alese de el
+          </li>
+          <li>
+              Din butonul Statistics poate vizualiza un grafic cu evoluția obezității într-o țară selectată de el
+          </li>
+        </ul>
+      </li>
+
+  
+    </ol>
+  
+  
+</section>
+</body>
+</html>
