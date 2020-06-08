@@ -60,12 +60,13 @@ h2 {
 .tabel th {
   background-color: #1f2739;
 }
-.tabel tr:nth-child(odd) {
+.tabel tr {
+  background-color: #2c3446;
+}
+
+.tabel tr:nth-child(even) {
   background-color: #323c50;
 }
-}
-.tabel tr:nth-child(even) {
-  background-color: #2c3446;
 }
 
 }
