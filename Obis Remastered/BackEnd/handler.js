@@ -69,7 +69,7 @@ function handleCsv(req, body) {
     if (pathname === "/csv/data") {
         return new Promise((resolve) => {
             db.getData(body).then((obj) => {
-                converter.json2.csv(
+                converter.json2csv(
                     obj, (err, csv) => {
                         if (err) {
                             console.log(err);
