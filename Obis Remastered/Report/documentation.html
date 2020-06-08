@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title> Obesity Prevalence Visualizer - Scholarly HTML</title>
+  </head>
+  <body prefix="schema: http://schema.org">
+      <h1> Obesity Prevalence Visualizer - Raport Scholarly</h1>
+
+      <div id="container">
+        	<ul>
+
+            	<li><a href = "#arhitectura"> 4.Arhitectura proiectului</a>
+                	<ul>
+                    	<li><a href = "#diagrama"> 4.1.Diagramă </a></li>
+                        <li><a href = "#context"> 4.2.Context </a></li>
+                        <li><a href = "#diagrama bd"> 4.3.Diagramă bază de date </a></li>
+                	</ul>
+            	</li>
+        	</ul>
+    	</div>
+
+
+
+    <section id="arhitectura">
+        <h2>
+            <span>4. </span>
+             Arhitectura proiectului
+        </h2>
+        <h3 id="diagrama">
+            <span>4.1 </span>
+            Diagramă
+        </h3>
+      	<p>
+       		<img src="./images/big_diagram.png" alt="Diagrama">
+      	</p>
+
+        <h3 id="context">
+            <span>4.2 </span>
+            Context
+        </h3>
+        <p>
+            Accesarea aplicației Obis va direcționa utilizatorul către pagina principală. Aceasta conține un design simplu și intuitiv, ce-i va permite utilizatorului să acceseze imediat atât un scurt rezumat al problemelor legate de obezitate, cât și motivele ce duc la aceasta. Utilizatorului îi sunt expuse următoarele posibilități : 
+        </p>
+        <ol type="I">
+            <li>
+            	Utilizatorul poate accesa rezumatul.
+            </li>
+
+            <li>
+                Utilizatorul poate accesa unul dintre cele 3 tab-uri ale site-ului :
+            
+            <ol type="a">
+                <li>
+                    Data Visualization : aici are posibilitatea de a  
+                
+                <ul style="list-style-type:disc;">
+                    <li>
+                        vizualiza datele existente în baza de date și de a urmări manual evoluția de la an la an a statelor.
+                    </li>
+                    <li>
+                        de a exporta într-un fișier în format csv datele din tabelul vizualizat anterior.
+                    </li>
+                </ul>
+                <li>
+                    Compare Data : aici utilizatorul aplicației poate selecta din baza de date oricare 2 state disponibile și să facă o comparație între cele două, alegând un criteriu din cele deja existente. În urmă selecției, un grafic va fi afișat și pe baza graficului, acesta observă diferența dintre cele două state pentru categoria aleasă anterior.
+                </li>
+                <li>
+                    Statistics : utilizatorul poate observa evoluția statelor aflate în baza de date de-a lungul anilor pe baza criteriilor deja existente. Utilizatorul trebuie să selecteze un stat din cele disponibile, iar aplicația va afișa cele menționate anterior.
+                </li>
+            </ol>
+          	</li>
+        </ol>
+
+        <h3 id="diagrama bd">
+          <span>4.3 </span>
+          Diagramă bază de date
+        </h3>
+          <p>
+            <img src="./images/Diagrama baza de date.png" alt="Diagrama BD">
+          </p>
+      </section>
+
