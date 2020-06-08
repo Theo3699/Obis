@@ -44,7 +44,7 @@ module.exports = (req, body) => {
 //firstId=${country1}&secondId=${country2}&criterias=${criteria}
 function handleCompare(req, body) {
     if (req.method === "GET") {
-        console.log("facem compare"); // to be deleted
+        console.log("comparing"); // to be deleted
 
         return db.compare(body);
     }
