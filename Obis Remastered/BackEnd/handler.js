@@ -9,6 +9,10 @@ module.exports = (req, body) => {
     if (pathname === "/data/country") {
       return handleCountry(req, body);
     }
+
+    if (pathname === "/compare") {
+      return handleCompare(req, body);
+    }
   
     if (pathname === "/data") {
       return handleData(req, body);
