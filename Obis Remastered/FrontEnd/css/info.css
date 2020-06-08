@@ -29,6 +29,7 @@ body{
   display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
   margin-top : 50px;
   margin-left : 2em;
+  margin-right : 1em;
 }
 
 h1{
@@ -50,8 +51,6 @@ h1{
   display : flex;
   flex-direction : column;
   justify-content : center;
-  margin-right : 5em;
-  margin-left : 2em;
   width : 80%;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -93,7 +92,6 @@ h1{
   position : relative;
   border-radius : 50%;
   display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
-  margin-top : 50px;
   margin-left : 2em;
 }
 
@@ -102,6 +100,19 @@ h1{
   flex-direction : column;
   align-items : center;
   width : 30%;
+}
+
+.cause-fade-in-under {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2em;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -131,4 +142,78 @@ h1{
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@media (min-width: 380px) and (max-width: 420px) and (max-height:736px) {
+    body {
+        overflow : auto;
+    }
+    h1 {
+      margin-top : 1em;
+      font-size : 1.5em;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 400px) and (max-height:736px) {
+    body {
+      overflow : auto;
+    }
+
+    h1 {
+      margin-top : 3em;
+      font-size : 1em;
+    }
+
+    .img-cause{
+      background-image : url("../assets/undraw_speed_test_wxl0.svg");
+      background-size : 100% 100%; /*latimea si inaltimea, 100% inseamna ca zona e acoperita de o poza*/
+      height : 200px;
+      width : 150px;
+      position : relative;
+      border-radius : 50%;
+      display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
+      margin-left : 1em;
+}
+
+    .img-what-is{
+      background-image : url("../assets/undraw_questions_75e0.svg");
+      background-size : 100% 100%; /*latimea si inaltimea, 100% inseamna ca zona e acoperita de o poza*/
+      height : 100px;
+      width : 120px;
+      position : relative;
+      border-radius : 50%;
+      display : inline-block; /*o pastreaza centrata, NU MODIFICA VALOAREA */
+      margin-top : 50px;
+      margin-left : 2em;
+      margin-right : 1em;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (max-height:1366px) {
+    
+    .reasons-column{
+      font-size : 2em;
+      width : 60%;
+      display : flex;
+      flex-direction : column;
+      align-items : center;
+      -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 2s; /* Firefox < 16 */
+          -ms-animation: fadein 2s; /* Internet Explorer */
+           -o-animation: fadein 2s; /* Opera < 12.1 */
+              animation: fadein 2s;
+}
+    .obesity-whatis-fade-in {
+      font-size : 2em;
+      display : flex;
+      flex-direction : column;
+      justify-content : center;
+      width : 80%;
+      -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 2s; /* Firefox < 16 */
+          -ms-animation: fadein 2s; /* Internet Explorer */
+           -o-animation: fadein 2s; /* Opera < 12.1 */
+              animation: fadein 2s;  
+}
 }
