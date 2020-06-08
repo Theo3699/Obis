@@ -66,16 +66,16 @@ function handleCsv(req, body) {
         ]
     };
 
-    if (pathname === "csv/data") {
+    if (pathname === "/csv/data") {
         return new Promise((resolve) => {
             db.getData(body).then((obj) => {
-                converter.json2.csv(
+                converter.json2csv(
                     obj, (err, csv) => {
                         if (err) {
                             console.log(err);
                         }
 
-                        false.writeFile("./csv/data.csv", csv, (err) => {
+                        fs.writeFile("./csv/data.csv", csv, (err) => {
                             if (err) {
                                 resolve("error in writing");
                                 throw err;

@@ -6,7 +6,6 @@ body{
 	background-image : url('http://artlantis-media.ru/static/img/0000/0002/7260/27260842.qvpm616fga.png');
 	background-blend-mode : overlay; 
 	background-size : 15%;/*imaginea de fundal micsorata*/
-	overflow : hidden;/*fara scroll bar daca nu incape informatia*/	
 	overflow-y : auto;/*same, dar pt marginile de sus/jos */
 }
 
