@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/obis", {
-  ///obis este numele bazei de date pe care noi o accesam
+  ///obis is the name of the db that we are accessing
   useNewUrlParser: true,//To use the new parser, pass option
   useUnifiedTopology: true,// open a connection to the test database on our locally running instance of MongoDB
 });
@@ -11,17 +11,17 @@ db.once("open", function () {//We now need to get notified if we connect success
   console.log("connected successfully to database");
 });
 
-//creem schema 
+//we build the schemas for our db
 var countrySchema = new mongoose.Schema({
   name: String,
   year: Number,
-}).index({//creeaza un index compus pentru aceasta schema 
-  name: 1,
+}).index({//Compound indexes for the schema
+  name: 1,// a value of 1 specifies an index that orders items in ascending order.
   year: 1
 }, {
-  unique: true//acesta trebuie sa fie unic, neputand avea doua tari cuacelasi nume si acelasi an
+  unique: true//this must be unique so that we can introduce two countries with the same name and year
 });
-var Country = mongoose.model("Country", countrySchema);
+var Country = mongoose.model("Country", countrySchema);//Create the mongoose Model
 
 
 var dataSchema = new mongoose.Schema({
@@ -29,26 +29,26 @@ var dataSchema = new mongoose.Schema({
   maleGrowth: Number,
   femaleGrowth: Number,
   curePercentage: Number,
-  _id: {//legatura cu cealalta schema
-    type: mongoose.Schema.Types.ObjectId,//un obiect cu subcategoriile de nume si an
-    ref: "Country",
+  _id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Country",//the link between these 2 schemas
   },
 });
-var Data = mongoose.model("Data", dataSchema);
+var Data = mongoose.model("Data", dataSchema);//Create the mongoose Model
 
 
 function createCountry(countryObj) {
   return new Promise((resolve) => {
-    if (!isValidCountry(countryObj)) {
-      resolve("error");
+    if (!isValidCountry(countryObj)) {//we test that the data that we receive through our variable is valid
+      resolve("error");//throw an error if he data is unvalid
     } else {
-      const newCountry = new Country(countryObj);
+      const newCountry = new Country(countryObj);//we create the variable and put the data in the schema
       newCountry
-        .save()
-        .then((doc) => {//we get acces to the document that we just saved in our DB
+        .save()//we save the country
+        .then((doc) => {//An instance of a model is called a document.
           resolve(doc);
         })
-        .catch((err) => {//daca este vreo eroare in salvarea in baza de date, o "prindem"
+        .catch((err) => {//if there is an error we need to chatch it
           resolve(err);
         });
     }
@@ -57,10 +57,10 @@ function createCountry(countryObj) {
 
 function createData(data) {
   return new Promise((resolve) => {
-    if (!isValidData(data)) {
-      resolve("error");//datele date nu sunt valide
+    if (!isValidData(data)) {//we test that the data that we receive through our variable is valid
+      resolve("error");//throw an error if he data is unvalid
     } else {
-      const newData = new Data({
+      const newData = new Data({//we convert the data in the schema
         yearGrowth: data.yearGrowth,
         maleGrowth: data.maleGrowth,
         curePercentage: data.curePercentage,
@@ -68,34 +68,34 @@ function createData(data) {
         _id: data.id,
       });
       newData
-        .save()
-        .then((doc) => {
+        .save()//we save the data
+        .then((doc) => {//An instance of a model is called a document.
           resolve(doc);//the response
         })
         .catch((err) => {//any error that shows up
-          resolve(err.message);
+          resolve(err);
         });
     }
   });
 }
 
 function getCountries() {
-  return Country.find();//returnam toate tarile din baza de date
+  return Country.find();//we return allthe countries that are in the database
 }
 
-function isValidCountry(country) {
+function isValidCountry(country) {//we test if the informations for a country is valid
   if (country.name === undefined) {
-    return false;//testam numele
+    return false;//tst the name
   }
   if (country.year === undefined) {
-    return false;//testam anul
+    return false;//test the year
   }
 
   return true;
 }
  
 
-function isValidData(data) {
+function isValidData(data) {//we test if all the field in the data variable is valid
   console.log(data);
 
   if (data.yearGrowth === undefined) {
@@ -127,11 +127,11 @@ function getData({ country }) {
     Country.find(filter).then((countries) => {
       Data.find().then((countriesData) => {
         countries.forEach((country) => {
-          obj = countriesData.find((o) => o.id === country.id);
-          if (obj === undefined) {
-            result.push(addPartialProps(country));
+          obj = countriesData.find((o) => o.id === country.id);//we search for the data with the same id with our country
+          if (obj === undefined) {//test if the object is undefined
+            result.push(addPartialProps(country));//if we don't find the data for a country
           } else {
-            result.push(addAllProps(country, obj));
+            result.push(addAllProps(country, obj));//if we find all the data that we need 
           }
         });
         resolve(result);
@@ -140,7 +140,7 @@ function getData({ country }) {
   });
 }
 
-//exportul functiilor
+//the exports of the functions
 module.exports = {
   createCountry,
   getCountries,
