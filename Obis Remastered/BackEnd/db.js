@@ -93,7 +93,7 @@ function isValidCountry(country) {//we test if the informations for a country is
 
   return true;
 }
- 
+
 
 function isValidData(data) {//we test if all the field in the data variable is valid
   console.log(data);
@@ -121,8 +121,8 @@ function getData({ country }) {
   return new Promise((resolve) => {
     const filter = country
       ? {
-          name: country,
-        }
+        name: country,
+      }
       : null;
     Country.find(filter).then((countries) => {
       Data.find().then((countriesData) => {
@@ -207,10 +207,9 @@ function getDataById(id) {
   });
 }
 
-getDataById("5ed7f2903b076610f0cbce90");//working as intended
+//getDataById("5ed7f2903b076610f0cbce90");//working as intended
 //getDataById("5ed7f290326610f0cwwbce90");//not working as intended - id doesn't exist in db
 
-//firstId=${country1}&secondId=${country2}&criterias=${criteria}obj
 function isValidCompare(obj) {
   return new Promise((resolve) => {
     Country.find({
