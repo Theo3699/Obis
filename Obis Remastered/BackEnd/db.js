@@ -15,13 +15,13 @@ db.once("open", function () {//We now need to get notified if we connect success
 var countrySchema = new mongoose.Schema({
   name: String,
   year: Number,
-}).index({//Compound indexes for the schema
-  name: 1,// a value of 1 specifies an index that orders items in ascending order.
+}).index({
+  name: 1,
   year: 1
 }, {
-  unique: true//this must be unique so that we can introduce two countries with the same name and year
+  unique: true
 });
-var Country = mongoose.model("Country", countrySchema);//Create the mongoose Model
+var Country = mongoose.model("Country", countrySchema);
 
 
 var dataSchema = new mongoose.Schema({
@@ -40,12 +40,12 @@ var Data = mongoose.model("Data", dataSchema);//Create the mongoose Model
 function createCountry(countryObj) {
   return new Promise((resolve) => {
     if (!isValidCountry(countryObj)) {//we test that the data that we receive through our variable is valid
-      resolve("error");//throw an error if he data is unvalid
+      resolve("error");
     } else {
       const newCountry = new Country(countryObj);//we create the variable and put the data in the schema
       newCountry
-        .save()//we save the country
-        .then((doc) => {//An instance of a model is called a document.
+        .save()
+        .then((doc) => {
           resolve(doc);
         })
         .catch((err) => {//if there is an error we need to chatch it
@@ -58,7 +58,7 @@ function createCountry(countryObj) {
 function createData(data) {
   return new Promise((resolve) => {
     if (!isValidData(data)) {//we test that the data that we receive through our variable is valid
-      resolve("error");//throw an error if he data is unvalid
+      resolve("error");
     } else {
       const newData = new Data({//we convert the data in the schema
         yearGrowth: data.yearGrowth,
@@ -69,8 +69,8 @@ function createData(data) {
       });
       newData
         .save()//we save the data
-        .then((doc) => {//An instance of a model is called a document.
-          resolve(doc);//the response
+        .then((doc) => {
+          resolve(doc);
         })
         .catch((err) => {//any error that shows up
           resolve(err);
@@ -85,10 +85,10 @@ function getCountries() {
 
 function isValidCountry(country) {//we test if the informations for a country is valid
   if (country.name === undefined) {
-    return false;//tst the name
+    return false;
   }
   if (country.year === undefined) {
-    return false;//test the year
+    return false;
   }
 
   return true;
@@ -128,10 +128,10 @@ function getData({ country }) {
       Data.find().then((countriesData) => {
         countries.forEach((country) => {
           obj = countriesData.find((o) => o.id === country.id);//we search for the data with the same id with our country
-          if (obj === undefined) {//test if the object is undefined
-            result.push(addPartialProps(country));//if we don't find the data for a country
+          if (obj === undefined) {
+            result.push(addPartialProps(country));
           } else {
-            result.push(addAllProps(country, obj));//if we find all the data that we need 
+            result.push(addAllProps(country, obj));
           }
         });
         resolve(result);

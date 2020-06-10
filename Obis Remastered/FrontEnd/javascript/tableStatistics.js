@@ -18,7 +18,7 @@ function getData() {//we create the table
 
 function populateTable(cellValue, tableRow) {//this function adds a value to a row
     const cell=document.createElement('td');//Creates an instance of the element for the 'td' tag
-    const cellText=document.createTextNode(isNaN(cellValue) ? cellValue : `${cellValue}%`);//if the element is a number then we add the value of it
+    const cellText=document.createTextNode(isNaN(cellValue) ? cellValue : `${cellValue}%`);
     cell.appendChild(cellText);
     tableRow.appendChild(cell);//we just add the cell that we created before to the end of the row because the cell is a td
 }
