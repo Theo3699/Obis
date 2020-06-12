@@ -248,20 +248,21 @@ function compare(body) {
             };
 
             body.criterias.split(",").forEach((criteria) => {
-              firstObjectAdvantage[criteria] =
-                parseInt(firstObj[criteria]) - parseInt(secondObj[criteria]);
+              firstObjectAdvantage[criteria] = parseInt(firstObj[criteria]) - parseInt(secondObj[criteria]);
               firstObjectAdvantage.sum += firstObjectAdvantage[criteria];
+
             });
+            console.log(firstObjectAdvantage);
             if (firstObjectAdvantage.sum === 0) {
               result.winner = "tie";
+              //console.log(result);
               resolve(result);
             }
 
             if (firstObjectAdvantage.sum > 0) {
               result.winner = firstObjectAdvantage;
-              console.log(result);
-
               result.winner.id = firstObj.id;
+              //console.log(result);
               resolve(result);
             } else {
               if (firstObjectAdvantage.sum < 0) {
@@ -272,6 +273,7 @@ function compare(body) {
                 });
                 result.winner = firstObjectAdvantage;
                 result.winner.id = secondObj.id;
+                //console.log(result);
                 resolve(result);
               }
             }
