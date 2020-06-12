@@ -115,6 +115,10 @@ h1{
             animation: fadein 2s;
 }
 
+.doc{
+  color : white;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
